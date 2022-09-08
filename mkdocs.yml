@@ -17,9 +17,8 @@ nav:
     - 'Introduction': 'Part 1/01 Introduction.md'
   - Part 2 - Provisioning a COS service:
     - 'Introduction': 'Part 2/01 Introduction.md'
-    - 'Watch a service being provisioned': 'Part 2/02 Watch-service.md'
   - Part 3 - Next steps:
-    - 'Next steps': 'Part 8/01 Next steps.md'
+    - 'Next steps': 'Part 3/01 Introduction.md'
 
 theme:
   name: material
