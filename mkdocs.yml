@@ -15,10 +15,24 @@ nav:
   - Introduction: 'index.md'
   - Part 1 - Overview:
     - 'Introduction': 'Part 1/01 Introduction.md'
-  - Part 2 - Provisioning a COS service:
+  - Part 2 - Provision a COS service:
     - 'Introduction': 'Part 2/01 Introduction.md'
-  - Part 3 - Next steps:
-    - 'Next steps': 'Part 3/01 Introduction.md'
+  - Part 3 - Provision a Key Protect service:
+    - 'Introduction': 'Part 3/01 Introduction.md'
+  - Part 4 - Create a service authorization:
+    - 'Introduction': 'Part 4/01 Introduction.md'
+  - Part 5 - Provision an Actitity Tracker service:
+    - 'Introduction': 'Part 5/01 Introduction.md'
+  - Part 6 - Create a COS bucket:
+    - 'Introduction': 'Part 6/01 Introduction.md'
+  - Part 7 - Create COS objects:
+    - 'Introduction': 'Part 7/01 Introduction.md'
+  - Part 8 - Using COS Command Line Interfaces:
+    - 'Introduction': 'Part 8/01 Introduction.md'
+  - Part 9 - Understanding COS Identifity and Access Management:
+    - 'Introduction': 'Part 9/01 Introduction.md'
+  - Part 10 - Next steps:
+    - 'Next steps': 'Part 10/01 NextSteps.md'
 
 theme:
   name: material
@@ -73,13 +87,21 @@ extra:
   account: "2305900 - ITZ - ADHOC03"
   COS:
     serviceInstanceName: "COS-L3-service"
+    serviceInstanceID: "7ae313ac-9571-4bf6-bc55-aea286699a31"
     serviceInstanceRG: "COS-L3"
     serviceInstanceLocation: "Dallas"
     serviceInstanceRegion: "us-south"
-    bucket-1: "cos-l3-bucket-1"
+    serviceEndpoint: "s3.us-south.cloud-object-storage.appdomain.cloud"
+    bucket-1: "cos-l3-retain-policy"
     bucket-1-storageClass: "Smart Tier"
+    bucket-1-retentionPolicy: true
     bucket-1-minimumExpiry: "0"
-    bucket-1-maximumExpiry: "2"
+    bucket-1-maximumExpiry: "3"
+    bucket-2: "cos-l3-no-retain-policy"
+    bucket-2-storageClass: "Smart Tier"
+    bucket-2-retentionPolicy: false
+
+
 
   KeyProtect:
     serviceInstanceName: "COS-L3-KP-service"
