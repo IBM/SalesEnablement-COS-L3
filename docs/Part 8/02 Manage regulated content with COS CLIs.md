@@ -101,7 +101,7 @@ ibmcloud iam api-key-create MyKey -d "this is my API key" --file key_file
 # using apices value from above output
 
 curl -X "POST" "https://iam.cloud.ibm.com/oidc/token"      -H 'Accept: application/json'      -H 'Content-T
-ype: application/x-www-form-urlencoded'      --data-urlencode "apikey=WmCVmTrDcnI8mU8CtS3hJXitQdmOJhQk1MzhhePqhKUN"      --data-
+ype: application/x-www-form-urlencoded'      --data-urlencode "apikey=INSERTKEYHERE"      --data-
 urlencode "response_type=cloud_iam"      --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey"
 
 
