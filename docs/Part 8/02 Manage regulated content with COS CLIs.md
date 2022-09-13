@@ -19,11 +19,7 @@ The next steps are performed in using the IBM Cloud Shell window that was just o
 
 3. In the top-right corner of the IBM Cloud Shell window is a square icon with an "up" arrow. Click this button to upload a file — upload the SSH key downloaded earlier.
 
-![](_attachments/part5_step10a.png)
 
-Locate the **.pem** file in  Downloads folder specified earlier and  wait for the transfer to finish. A dialogue box will appear in the bottom-right corner of the IBM Cloud Shell window when the upload is complete.
-
-![](_attachments/part5_step10b.png)
 
 
 
