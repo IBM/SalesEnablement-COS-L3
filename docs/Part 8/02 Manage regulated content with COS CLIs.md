@@ -88,7 +88,7 @@ ic cos object-put —bucket cos-l3-bucket-1 —key arj.txt —body arj.txt
 
 # above uses default retention period
 
-# add a hold
+
 
 
 # do curl stuff??
