@@ -37,8 +37,11 @@ nav:
     - 'Click through demonstration of a COS service being provisioned': 'Part 6/03 ClickThru.md'
   - Part 7 - Create COS objects:
     - 'Introduction': 'Part 7/01 Introduction.md'
+    - 'Manage regulated content': 'Part 7/02 Manage regulated content.md'
+    - 'Legal holds': 'Part 7/03 Legal holds.md'
   - Part 8 - Using COS Command Line Interfaces:
     - 'Introduction': 'Part 8/01 Introduction.md'
+    - 'Manage regulated content': 'Part 7/02 Manage regulated content with COS CLIs.md'
   - Part 9 - Understanding COS Identifity and Access Management:
     - 'Introduction': 'Part 9/01 Introduction.md'
   - Next steps: 'NextSteps.md'
