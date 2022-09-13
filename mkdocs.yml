@@ -15,26 +15,26 @@ nav:
   - Introduction: 'index.md'
   - Part 1 - Overview of IBM Cloud Object Storage:
     - 'Introduction': 'Part 1/01 Introduction.md'
-  - Part 2 - Provision a COS service:
+  - Part 2 - Create a COS service:
     - 'Introduction': 'Part 2/01 Introduction.md'
-    - 'Watch a COS service being provisioned': 'Part 2/02 Watch.md'
-    - 'Click through demonstration of a COS service being provisioned': 'Part 2/03 ClickThru.md'
-  - Part 3 - Provision a Key Protect service:
+    - 'Watch a COS service being created': 'Part 2/02 Watch.md'
+    - 'Click through demonstration of a COS service being created': 'Part 2/03 ClickThru.md'
+  - Part 3 - Create a Key Protect service:
     - 'Introduction': 'Part 3/01 Introduction.md'
-    - 'Watch a COS service being provisioned': 'Part 3/02 Watch.md'
-    - 'Click through demonstration of a COS service being provisioned': 'Part 3/03 ClickThru.md'
+    - 'Watch a Key Protect service being created': 'Part 3/02 Watch.md'
+    - 'Click through demonstration of a Key Protect service being created': 'Part 3/03 ClickThru.md'
   - Part 4 - Create a service authorization:
     - 'Introduction': 'Part 4/01 Introduction.md'
-    - 'Watch a COS service being provisioned': 'Part 4/02 Watch.md'
-    - 'Click through demonstration of a COS service being provisioned': 'Part 4/03 ClickThru.md'
-  - Part 5 - Provision an Activity Tracker service:
+    - 'Watch a service authorization being created': 'Part 4/02 Watch.md'
+    - 'Click through demonstration of a service authorization being created': 'Part 4/03 ClickThru.md'
+  - Part 5 - Create an Activity Tracker service:
     - 'Introduction': 'Part 5/01 Introduction.md'
-    - 'Watch a COS service being provisioned': 'Part 5/02 Watch.md'
-    - 'Click through demonstration of a COS service being provisioned': 'Part 5/03 ClickThru.md'
+    - 'Watch a Activity Tracker service being created': 'Part 5/02 Watch.md'
+    - 'Click through demonstration of an Activity Tracker service being created': 'Part 5/03 ClickThru.md'
   - Part 6 - Create a COS bucket:
     - 'Introduction': 'Part 6/01 Introduction.md'
-    - 'Watch a COS service being provisioned': 'Part 6/02 Watch.md'
-    - 'Click through demonstration of a COS service being provisioned': 'Part 6/03 ClickThru.md'
+    - 'Watch a COS bucket being created': 'Part 6/02 Watch.md'
+    - 'Click through demonstration of a COS bucket being created': 'Part 6/03 ClickThru.md'
   - Part 7 - Create COS objects:
     - 'Introduction': 'Part 7/01 Introduction.md'
     - 'Manage regulated content': 'Part 7/02 Manage regulated content.md'
