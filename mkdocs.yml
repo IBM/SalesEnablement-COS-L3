@@ -19,10 +19,10 @@ nav:
     - 'Introduction': 'Part 2/01 Introduction.md'
     - 'Watch a COS service being created': 'Part 2/02 Watch.md'
     - 'Click through demonstration of a COS service being created': 'Part 2/03 ClickThru.md'
-  - Part 3 - Create a Key Protect service:
+  - Part 3 - Create a Key Protect service and root key:
     - 'Introduction': 'Part 3/01 Introduction.md'
-    - 'Watch a Key Protect service being created': 'Part 3/02 Watch.md'
-    - 'Click through demonstration of a Key Protect service being created': 'Part 3/03 ClickThru.md'
+    - 'Watch a Key Protect service and root key being created': 'Part 3/02 Watch.md'
+    - 'Click through demonstration of a Key Protect service and root key being created': 'Part 3/03 ClickThru.md'
   - Part 4 - Create a service authorization:
     - 'Introduction': 'Part 4/01 Introduction.md'
     - 'Watch a service authorization being created': 'Part 4/02 Watch.md'
