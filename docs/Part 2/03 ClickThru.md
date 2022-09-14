@@ -7,7 +7,7 @@ Note, fields that require a text entry (e.g. service name) are pre-populated in 
 
 1. Open the link below and then click the **play button** ![](_attachments/ClickThruPlayButton.png) to begin the demonstration.
 
-    **Click-thru demo:** <a href="https://ibm.github.io/SalesEnablement-COS-L3/includes/CreateCOSService/index.html" target ="_blank">Create an IBM Cloud Object Storage service instance</a>
+    **Click-thru demo:** <a href="https://ibm.github.io/SalesEnablement-COS-L3/includes/CreateCOSservice/index.html" target ="_blank">Create an IBM Cloud Object Storage service instance</a>
 
 2. Click **Catalog** in the top menu bar.
 3. Click in the **Catalog search** text entry field.
