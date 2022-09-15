@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#macro-rendering-error" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -409,8 +404,6 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
-      
-        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -874,8 +867,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -889,20 +880,46 @@
                 
 
 
-<h1 id="macro-rendering-error"><em>Macro Rendering Error</em></h1>
-<p><strong>UndefinedError</strong>: 'KeyProtectr' is undefined</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Traceback (most recent call last):
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  File &quot;/usr/local/lib/python3.9/site-packages/mkdocs_macros/plugin.py&quot;, line 480, in render
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    return md_template.render(**page_variables)
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 1301, in render
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    self.environment.handle_exception()
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 936, in handle_exception
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    raise rewrite_traceback_stack(source=source)
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  File &quot;&lt;template&gt;&quot;, line 19, in top-level template code
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 485, in getattr
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    return getattr(obj, attribute)
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>jinja2.exceptions.UndefinedError: &#39;KeyProtectr&#39; is undefined
-</code></pre></div>
+  <h1>Click through demonstration of a Key Protect service and root key being created</h1>
+
+<p>Now it is time to provision a <strong>Key Protect</strong> service instance and a <strong>Root Key</strong>. Use the click-thru demonstration below to practice provisioning a Key Protect service and a Root Key. The click-thru demonstration corresponds to the video from the previous chapter. Refer to the video for talking points if the click-thru demonstration is utilized with clients.</p>
+<p>Note, fields that require a text entry (e.g. service name) are pre-populated in the click-thru demonstration.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Not sure where to click or what to do next? Simply click anywhere on the screen and the spot to click next will be highlighted.</p>
+</div>
+<ol>
+<li>
+<p>Open the link below and then click the <strong>play button</strong> <img alt="" src="../_attachments/ClickThruPlayButton.png" /> to begin the demonstration.</p>
+<p><strong>Click-thru demo:</strong> <a href="https://ibm.github.io/SalesEnablement-COS-L3/includes/CreateKPservice/index.html" target ="_blank">Create an IBM Key Protect service instance and Root Key</a></p>
+</li>
+<li>
+<p>Click <strong>Catalog</strong> in the top menu bar.</p>
+</li>
+<li>Click in the <strong>Catalog search</strong> text entry field.</li>
+<li>Click the <strong>Key Protect</strong> tile.</li>
+<li>Click the <strong>Select a location</strong> pull-down menu.</li>
+<li>Click the <strong>{{ no such element: dict object['serviceLocation'] }} Region</strong> option in the location pull-down menu.</li>
+<li>Click in the <strong>Service name</strong> text entry field.</li>
+<li>Click the <strong>Select a resource group</strong> pull-down menu.</li>
+<li>Click the <strong>COS-L3</strong> option in the resource group pull-down menu.</li>
+<li>Click the <strong>I have read and agree to the following license agreements</strong> check box.</li>
+<li>Click the <strong>Create</strong> button.</li>
+</ol>
+<p>Once the provisioning completes, the new Key Protect service can be found in the <strong>Services and software</strong> section of the IBM Cloud Portal dashboard. The Key Protect service instance is now ready for use.</p>
+<p>Next, a Root Key needs to be created in the Key Protect service.</p>
+<ol start="13">
+<li>Click <strong>Keys</strong> in the left-hand menu pane.</li>
+<li>Click the <strong>Add +</strong> button.</li>
+</ol>
+<p>Notice <strong>Root key</strong> is already selected under <strong>key type</strong>.</p>
+<ol start="15">
+<li>Click in the <strong>Key name</strong> text entry  field.</li>
+<li>Click the <strong>Select a key ring</strong> pull-down menu.</li>
+<li>Click the <strong>default</strong> option in the key ring pull-down menu.</li>
+<li>Click <strong>Add key</strong>.</li>
+</ol>
+<p>In the next part of the demonstration guide, learn how to create an <strong>Activity Tracker</strong> instance..</p>
 
 
 
