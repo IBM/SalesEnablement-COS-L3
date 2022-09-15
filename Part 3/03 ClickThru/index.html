@@ -882,7 +882,7 @@
 
   <h1>Click through demonstration of a Key Protect service and root key being created</h1>
 
-<p>Now it is time to provision a Key Protect service instance and Root Key. Use the click-thru demonstration below to practice provisioning a Key Protect service and a Root Key. The click-thru demonstration corresponds to the video from the previous chapter. Refer to the video for talking points if the click-thru demonstration is utilized with clients.</p>
+<p>Now it is time to provision a <strong>Key Protect</strong> service instance and a <strong>Root Key</strong>. Use the click-thru demonstration below to practice provisioning a Key Protect service and a Root Key. The click-thru demonstration corresponds to the video from the previous chapter. Refer to the video for talking points if the click-thru demonstration is utilized with clients.</p>
 <p>Note, fields that require a text entry (e.g. service name) are pre-populated in the click-thru demonstration.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -897,15 +897,29 @@
 <p>Click <strong>Catalog</strong> in the top menu bar.</p>
 </li>
 <li>Click in the <strong>Catalog search</strong> text entry field.</li>
-<li>Click the <strong>Object Storage</strong> tile.</li>
-<li>Click the <strong>IBM Cloud</strong> tile under <strong>Choose an Infrastructure</strong> section.</li>
-<li>Click the <strong>Standard</strong> pricing plan row in the pricing plan table.</li>
+<li>Click the <strong>Key Protect</strong> tile.</li>
+<li>Click the <strong>Select a location</strong> pull-down menu.</li>
+<li>Click the <strong>Dallas (us-south) Region</strong> option in the location pull-down menu.</li>
 <li>Click in the <strong>Service name</strong> text entry field.</li>
 <li>Click the <strong>Select a resource group</strong> pull-down menu.</li>
 <li>Click the <strong>COS-L3</strong> option in the resource group pull-down menu.</li>
+<li>Click the <strong>I have read and agree to the following license agreements</strong> check box.</li>
 <li>Click the <strong>Create</strong> button.</li>
 </ol>
-<p>Once the provisioning completes, the new COS service can be found in the <strong>Storage</strong> section of the IBM Cloud Portal dashboard. The COS service instance is now ready for use. In the next part of the demonstration guide, learn how to provision a <strong>COS bucket</strong>.</p>
+<p>Once the provisioning completes, the new Key Protect service can be found in the <strong>Services and software</strong> section of the IBM Cloud Portal dashboard. The Key Protect service instance is now ready for use.</p>
+<p>Next, a Root Key needs to be created in the Key Protect service.</p>
+<ol start="13">
+<li>Click <strong>Keys</strong> in the left-hand menu pane.</li>
+<li>Click the <strong>Add +</strong> button.</li>
+</ol>
+<p>Notice <strong>Root key</strong> is already selected under <strong>key type</strong>.</p>
+<ol start="15">
+<li>Click in the <strong>Key name</strong> text entry  field.</li>
+<li>Click the <strong>Select a key ring</strong> pull-down menu.</li>
+<li>Click the <strong>default</strong> option in the key ring pull-down menu.</li>
+<li>Click <strong>Add key</strong>.</li>
+</ol>
+<p>In the next part of the demonstration guide, learn how to create an <strong>Activity Tracker</strong> instance..</p>
 
 
 
