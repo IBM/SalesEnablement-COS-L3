@@ -114,7 +114,11 @@ extra:
     bucket-2-storageClass: "Smart Tier"
     bucket-2-retentionPolicy: false
 
-
+  ActivityTracker:
+    atLocation: "Dallas (us-south)"
+    atPricingPlan: "7 day Event Search"
+    atInstanceName: "COS-L3-activity-tracker"
+    atInstanceRG: "COS-L3"
 
   KeyProtect:
     serviceInstanceName: "COS-L3-KP-service"

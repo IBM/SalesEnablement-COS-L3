@@ -1,4 +1,4 @@
-Now it is time to provision a COS service instance. Use the click-thru demonstration below to practice provisioning a COS service. The click-thru demonstration corresponds to the video from the previous chapter. Refer to the video for talking points if the click-thru demonstration is utilized with clients.
+Now it is time to provision a **COS** service instance. Use the click-thru demonstration below to practice provisioning a COS service. The click-thru demonstration corresponds to the video from the previous chapter. Refer to the video for talking points if the click-thru demonstration is utilized with clients.
 
 Note, fields that require a text entry (e.g. service name) are pre-populated in the click-thru demonstration.
 
@@ -19,4 +19,4 @@ Note, fields that require a text entry (e.g. service name) are pre-populated in 
 10. Click the **COS-L3** option in the resource group pull-down menu.
 11. Click the **Create** button.
 
-Once the provisioning completes, the new COS service can be found in the **Storage** section of the IBM Cloud Portal dashboard. The COS service instance is now ready for use. In the next part of the demonstration guide, learn how to provision a **COS bucket**.
+Once the provisioning completes, the new COS service can be found in the **Storage** section of the IBM Cloud Portal dashboard. The COS service instance is now ready for use. In the next part of the demonstration guide, learn how to provision a **Key Protect** service instance and **Root Key**.
