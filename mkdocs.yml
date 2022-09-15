@@ -23,14 +23,14 @@ nav:
     - 'Introduction': 'Part 3/01 Introduction.md'
     - 'Watch a Key Protect service and root key being created': 'Part 3/02 Watch.md'
     - 'Click through demonstration of a Key Protect service and root key being created': 'Part 3/03 ClickThru.md'
-  - Part 4 - Create a Activity Tracker service:
+  - Part 4 - Create an service authorization:
     - 'Introduction': 'Part 4/01 Introduction.md'
-    - 'Watch an Activity Tracker service being created': 'Part 4/02 Watch.md'
-    - 'Click through demonstration of an Activity Tracker service being created': 'Part 4/03 ClickThru.md'
-  - Part 5 - Create an service authorization:
+    - 'Watch a service authorization being created': 'Part 4/02 Watch.md'
+    - 'Click through demonstration of a service authorization being created': 'Part 4/03 ClickThru.md'
+  - Part 5 - Create a Activity Tracker service:
     - 'Introduction': 'Part 5/01 Introduction.md'
-    - 'Watch a service authorization being created': 'Part 5/02 Watch.md'
-    - 'Click through demonstration of a service authorization being created': 'Part 5/03 ClickThru.md'
+    - 'Watch an Activity Tracker service being created': 'Part 5/02 Watch.md'
+    - 'Click through demonstration of an Activity Tracker service being created': 'Part 5/03 ClickThru.md'
   - Part 6 - Create a COS bucket:
     - 'Introduction': 'Part 6/01 Introduction.md'
     - 'Watch a COS bucket being created': 'Part 6/02 Watch.md'

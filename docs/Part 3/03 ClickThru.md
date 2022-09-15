@@ -34,4 +34,4 @@ Notice **Root key** is already selected under **key type**.
 17. Click the **default** option in the key ring pull-down menu.
 18. Click **Add key**.
 
-In the next part of the demonstration guide, learn how to create an **Activity Tracker** instance..
+In the next part of the demonstration guide, learn how to create a **Service authorization** between the COS service instance and the Key Protect service instance.
