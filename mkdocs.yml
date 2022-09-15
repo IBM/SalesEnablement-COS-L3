@@ -115,14 +115,13 @@ extra:
     bucket-2-retentionPolicy: false
 
   ActivityTracker:
-    atLocation: "Dallas (us-south)"
-    atPricingPlan: "7 day Event Search"
-    atInstanceName: "COS-L3-activity-tracker"
-    atInstanceRG: "COS-L3"
+    serviceLocation: "Dallas (us-south)"
+    servicePricingPlan: "7 day Event Search"
+    serviceInstanceName: "COS-L3-activity-tracker"
+    serviceInstanceRG: "COS-L3"
 
   KeyProtect:
     serviceInstanceName: "COS-L3-KP-service"
     serviceInstanceRG: "COS-L3"
-    serviceInstanceLocation: "Dallas"
-    serviceInstanceRegion: "us-south"
+    serviceInstanceLocation: "Dallas (us-south)"
     rootKey: "COS-L3-RootKey-1"
