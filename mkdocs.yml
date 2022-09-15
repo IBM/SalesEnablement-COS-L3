@@ -102,15 +102,16 @@ extra:
     serviceInstanceName: "COS-L3-service"
     serviceInstanceID: "7ae313ac-9571-4bf6-bc55-aea286699a31"
     serviceInstanceRG: "COS-L3"
-    serviceInstanceLocation: "Dallas"
+    serviceInstanceLocation: "Dallas (us-south)"
     serviceInstanceRegion: "us-south"
     serviceEndpoint: "s3.us-south.cloud-object-storage.appdomain.cloud"
-    bucket-1: "cos-l3-retain-policy"
+    bucket-1: "cos-l3-with-retention"
     bucket-1-storageClass: "Smart Tier"
     bucket-1-retentionPolicy: true
-    bucket-1-minimumExpiry: "0"
-    bucket-1-maximumExpiry: "3"
-    bucket-2: "cos-l3-no-retain-policy"
+    bucket-1-minimumRetention: "0"
+    bucket-1-defaultRetention: "1"
+    bucket-1-maximumRetention: "7"
+    bucket-2: "cos-l3-without-retention"
     bucket-2-storageClass: "Smart Tier"
     bucket-2-retentionPolicy: false
 
