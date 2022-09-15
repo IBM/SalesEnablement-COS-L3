@@ -16,7 +16,7 @@ Note, fields that require a text entry (e.g. service name) are pre-populated in 
 7. Click the **{{KeyProtect.serviceLocation}} Region** option in the location pull-down menu.
 8. Click in the **Service name** text entry field.
 9. Click the **Select a resource group** pull-down menu.
-10. Click the **{{KeyProtectr.serviceInstanceRG}}** option in the resource group pull-down menu.
+10. Click the **{{KeyProtect.serviceInstanceRG}}** option in the resource group pull-down menu.
 11. Click the **I have read and agree to the following license agreements** check box.
 12. Click the **Create** button.
 
