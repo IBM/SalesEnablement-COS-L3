@@ -1,26 +1,35 @@
 Welcome to the {{learningplan.name}} demonstration guide! The goal is to provide IBM and Business Partner Sales and Technical Sales with the knowledge and tools to perform hands-on demonstrations of {{offering.name}}. Throughout this demonstration guide {{offering.name}} will be referred to as COS.
 
-To complete the {{learningplan.name}} badge requirements, IBM and Business Partner **sellers** must complete Parts 1 through Part 7 of this demonstration guide. IBM and Business Partner **technical sellers** must complete all sections. **Everyone is encouraged to complete all sections.**
+While everyone is encouraged to complete all sections of the demonstration guide, actual completion requirements vary by role:
 
-All modules are accompanied by recordings and narrated instructions, delivered by your team of authors. Be sure to watch these for a visual demonstration of how to perform the hands-on lab components. In particular, **it is strongly recommended that IBM Sellers and Technical Sellers watch these recordings** — they will be useful for you as you go about creating and recording your own Stand & Deliver presentations for Level 3 accreditation.
+- IBM Sales:
+  - Complete Parts 1 through 7 of this demonstration guide
+  - Record and submit a Stand and Deliver demonstration to be evaluated by management (details in the Your Learning plan)
+- IBM Technical Sales:
+  - Complete **all** Parts of this demonstration guide
+  - Record and submit a Stand and Deliver demonstration to be evaluated by management (details in the Your Learning plan)
 
-!!! tip "IMPORTANT"
-    To receive Level 3 accreditation, IBMers and Business Partners must demonstrate mastery of the skills learned throughout coursework. Level 3 accreditation requirements— and the way participants will be evaluated before receiving accreditation —differs depending on job role.
+  - Business Partner Sales
+  - Complete Parts 1 through 7 of this demonstration guide
+  - Successfully pass a 5 question quiz found in the learn.ibm.com plan
+- Business Partner Sales
+  - Complete all* Parts of this demonstration guide
+  - Successfully pass a 5 question quiz found in the learn.ibm.com plan
 
-**IBM Sales and Tech Sales** must develop and record a Stand & Deliver presentation. This video is intended to simulate your delivery of a “live” demo in front of a client — on camera. IBMers will have flexibility in defining a hypothetical client, the pain points that customer has, and the goals they aspire to achieve. The recording will then cover the seller’s hands-on demonstration and pitch to the client of the value of the IBM solution using the environments and techniques of this lab. Specific criteria that must be demonstrated as part of the Stand & Deliver recordings is provided within the documentation that accompanies the Level 3 course in Your Learning.
+**IBM Sales and Tech Sales** must develop and record a Stand & Deliver presentation. This video is intended to simulate delivery of a “live” demo in front of a client — on camera. IBMers will have flexibility in defining a hypothetical client, the pain points the customer has, and the goals they aspire to achieve. The recording will then cover the seller’s hands-on demonstration and pitch to the client of the value of the IBM solution using the environments and techniques of this lab. Specific criteria that must be demonstrated as part of the Stand & Deliver recordings is provided within the documentation that accompanies the Level 3 course in Your Learning.
 
-**Business Partners** must pass an accreditation quiz after completing the hands-on portion of the course. The quiz consists of multiple choice questions, with four possible responses (and only one correct answer) for each question.
+**Business Partners** must pass an accreditation quiz after completing the hands-on portion of the course. The quiz consists of multiple choice questions, with four possible responses (and only one correct answer) for each question. **Hint: keep the demonstration guide and the associated IBM Technology Zone environment active while completing the quiz.**
 
 Before jumping to part 1, please read the guidance below. Reading and understanding the information will save time while completing the steps in this guide.
 
 !!! tip "FIND HELP"
-    If at any point during the hands-on material you need help from the team of authors and other IBM experts, please connect with us via the <a href="{{slack.url}}" target="_blank">#cloud-platform-demo-feedback</a> Slack channel. Any comments or suggestions are also welcome in this channel.
+    If at any point during the hands-on material help is needed, please use the <a href="{{slack.url}}" target="_blank">#cloud-platform-demo-feedback</a> Slack channel. Comments or suggestions are also welcome in this channel.
 
 ## Helpful tips for using this demonstration guide and environment
 
 The {{guide.name}} is organized in parts and sub-parts or chapters. Most chapters contain numbered steps, which are actions to be performed.
 
-Throughout the guide, images are used as examples of the IBM Cloud Portal, IBM Cloud Shell, and PowerVS instance consoles.
+Throughout the guide, images are used as examples of the IBM Cloud Portal and IBM Cloud Shell.
 
 !!! warning
     The IBM Cloud Portal and {{offering.name}} changes on a regular basis and may differ from the images captured in this guide.
