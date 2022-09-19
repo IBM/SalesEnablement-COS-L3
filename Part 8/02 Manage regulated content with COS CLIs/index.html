@@ -903,7 +903,6 @@
                 
 
 
-<p>To be written:</p>
 <p>For this exercise, the IBM Cloud Shell will be used so no additional software is required. IBM Cloud Shell gives users complete control of their cloud resources, applications and infrastructure, from any web browser. IBM Cloud Shell provides pre-authenticated access to the latest tools and programming languages for cloud-based development, deployment and management of services and applications — all in a secure shell. IBM Cloud Shell is instantly accessible from the IBM Cloud portal.</p>
 <p>Follow the seps below to learn more about the COS command line interfaces.</p>
 <ol>
@@ -921,6 +920,24 @@
 <p>The next steps are performed in using the IBM Cloud Shell window that was just opened.</p>
 <ol start="3">
 <li>In the top-right corner of the IBM Cloud Shell window is a square icon with an "up" arrow. Click this button to upload a file — upload the SSH key downloaded earlier.</li>
+</ol>
+<p>In this chapter, a similar scenario as seen in Part 7 will be used where files will be uploaded, retention periods set, and attempts to delete the objects will be made. To facilite the scenario, a script is provided that will automatically download the 6 image files to the IBM Cloud Shell environment.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Be sure to utilize the demonstration guides <strong>copy</strong> <img alt="" src="../_attachments/Usage-Clipboard.png" /> icon to avoid typographical errors in executing commands.</p>
+</div>
+<ol start="4">
+<li>Download the script to download the images files.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wget https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/includes/downloadImageFiles.bash
+</code></pre></div>
+<ol start="5">
+<li>Execute the script to download the images files.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bash ./downloadImageFiles.bash
+</code></pre></div>
+<ol start="6">
+<li>When prompted, enter a unique prefix to use in the file names.</li>
 </ol>
 <blockquote>
 <p>ic cos config region —region “us-south”</p>
