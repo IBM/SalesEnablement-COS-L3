@@ -1,5 +1,3 @@
-To be written:
-
 For this exercise, the IBM Cloud Shell will be used so no additional software is required. IBM Cloud Shell gives users complete control of their cloud resources, applications and infrastructure, from any web browser. IBM Cloud Shell provides pre-authenticated access to the latest tools and programming languages for cloud-based development, deployment and management of services and applications — all in a secure shell. IBM Cloud Shell is instantly accessible from the IBM Cloud portal.
 
 Follow the seps below to learn more about the COS command line interfaces.
@@ -19,6 +17,24 @@ The next steps are performed in using the IBM Cloud Shell window that was just o
 
 3. In the top-right corner of the IBM Cloud Shell window is a square icon with an "up" arrow. Click this button to upload a file — upload the SSH key downloaded earlier.
 
+In this chapter, a similar scenario as seen in Part 7 will be used where files will be uploaded, retention periods set, and attempts to delete the objects will be made. To facilite the scenario, a script is provided that will automatically download the 6 image files to the IBM Cloud Shell environment.
+
+!!! important
+    Be sure to utilize the demonstration guides **copy** ![](_attachments/Usage-Clipboard.png) icon to avoid typographical errors in executing commands.
+
+4. Download the script to download the images files.
+
+```
+wget https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/includes/downloadImageFiles.bash
+```
+
+5. Execute the script to download the images files.
+
+```
+bash ./downloadImageFiles.bash
+```
+
+6. When prompted, enter a unique prefix to use in the file names.
 
 
 
