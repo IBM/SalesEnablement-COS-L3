@@ -97,7 +97,6 @@ extra:
   tz_environment:
     name: "IBM Cloud Object Storage - Sales Enablment L3"
     url: "https://techzone.ibm.com/my/reservations"
-#  account: "2435442 - ITZ - Satellite"
   account: "2305900 - ITZ - ADHOC03"
   COS:
     serviceInstanceName: "COS-L3-service"
@@ -106,15 +105,15 @@ extra:
     serviceInstanceLocation: "Dallas (us-south)"
     serviceInstanceRegion: "us-south"
     serviceEndpoint: "s3.us-south.cloud-object-storage.appdomain.cloud"
-    # bucket-1: "cos-l3-with-retention"
-    # bucket-1-storageClass: "Smart Tier"
-    # bucket-1-retentionPolicy: true
-    # bucket-1-minimumRetention: "0"
-    # bucket-1-defaultRetention: "1"
-    # bucket-1-maximumRetention: "7"
-    # bucket-2: "cos-l3-without-retention"
-    # bucket-2-storageClass: "Smart Tier"
-    # bucket-2-retentionPolicy: false
+    foo-1: "cos-l3-with-retention"
+    bucket-1-storageClass: "Smart Tier"
+    bucket-1-retentionPolicy: true
+    bucket-1-minimumRetention: "0"
+    bucket-1-defaultRetention: "1"
+    bucket-1-maximumRetention: "7"
+    bucket-2: "cos-l3-without-retention"
+    bucket-2-storageClass: "Smart Tier"
+    bucket-2-retentionPolicy: false
 
   ActivityTracker:
     serviceLocation: "Dallas (us-south)"
