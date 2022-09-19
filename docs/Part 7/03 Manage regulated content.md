@@ -114,7 +114,7 @@ Since the object was uploaded with a **0 Day** retention, it can be deleted.
 
 Once located, click just to the left of each line in the table.  This will expand the entry.
 
-![](_attachments/ATObjectCreateDetails.png)
+![](_attachments/ATObjectDeleteDetails.png)
 
 Take note of the details that **Activity Tracker** logged.
 
