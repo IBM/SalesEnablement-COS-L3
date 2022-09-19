@@ -1,8 +1,10 @@
+Next, follow  the steps below to verify the retention policies created for the bucket.
+
 To complete the next steps, users will be utilizing three (3) browser windows:
 
-1. Browser window with this demonstration site_description
-2. Browser window with IBM Cloud Portal accessing the COS bucket user Interfaces
-3. Browser window with IBM Cloud Activity tracker
+1. Browser window with this demonstration script
+2. Browser window with IBM Cloud Portal accessing the COS bucket user interface
+3. Browser window with IBM Cloud Activity Tracker
 
 Once all windows are started, arrange them on separate monitors if available or resize the windows so they are all visible at same time. Note, each page utilizes reactive web interfaces which when resized by hide certain menus or icons.
 
@@ -11,6 +13,8 @@ Once all windows are started, arrange them on separate monitors if available or 
 
 
 2. Open the IBM Cloud Portal Activity Tracker page: <a href="https://cloud.ibm.com/observe/activitytracker" target="_blank">https://cloud.ibm.com/observe/activitytracker</a>.
+
+Activity Tracker can also be accessed via the IBM Cloud Portal's left hand navigation hamburger menu under the **Observability** section.
 
 3. Click {{ActivityTracker.serviceInstanceName}} in the table.
 
