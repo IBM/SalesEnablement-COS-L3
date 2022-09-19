@@ -112,19 +112,51 @@ Since the object was uploaded with a **0 Day** retention, it can be deleted.
 
 ![](_attachments/ATObjectDelete.png)
 
-Note, the **create object** event should be towards the bottom of the listing. Once located, click just to the left of the line in the table.  This will expand the entry.
+Once located, click just to the left of each line in the table.  This will expand the entry.
 
 ![](_attachments/ATObjectCreateDetails.png)
 
+Take note of the details that **Activity Tracker** logged.
 
-    - Upload an object to bucket w/ retention policy of 1 to 3 days(Do)
-    - View object details (Do)
-    - View activity tracker (Do)
-    - Attempt to delete an object (Do) - should fail
-    - View activity tracker (Do)
+**Next, repeat steps seven (7) through 12 to upload another file to COS, but this time set the Duration to a value between one (1) and size (6).** Recall, the maximum retention period for the bucket is set to 6.
 
-    - ingest data into COS
-    - specify object-specific retention durations
-    - place legal holds on data
-    - restore data
-    - attempt to delete data from COS to validate retention policies and legal holds are honored
+![](_attachments/UploadObject2.png)
+
+What will happen if an attempt is made to delete this recently uploaded file?
+
+20. Select the newly uploaded file and click **Delete objects**.
+
+![](_attachments/DeleteObject2.png)
+
+21. Click **Delete** in the **Delete object** dialog.
+
+Did the **delete** succeed? Why not?
+
+A message the like the image below should be displayed stating the delete did not succeed "due to an attached policy".
+
+![](_attachments/DeleteObject2Failed.png)
+
+22. Switch to the **Activity Tracker** Dashboard.
+
+23. Locate the two (2) new **delete** events in the Dashboard.
+
+Note, these should show a **warning** status instead of **normal**.
+
+![](_attachments/ATDeleteObject2Failed.png)
+
+24. Expand the first event **delete** event in the Dashboard by clicking just to the left of the entry.
+
+![](_attachments/ATDeleteObject2Failed2.png)
+
+Notice the following fields in the event that are now audit ready.
+
+![](_attachments/ATDeleteObject2FailedDetails.png)
+
+Because the expiration for the object was set with a three (3) day retention period, the object can not be removed. This object will remain in COS until either one of the following two actions occur:
+
+- The object is deleted after the 3 day retention period by someone with appropriate permissions.
+- The object is automatically deleted after the 7 day expiry occurs that is set on the bucket.
+
+Note, objects stored in a bucket that have a retention policy set are not automatically deleted after that retention policy is met. Objects must either be manually deleted or an expiration rule must be set as part of the bucket's lifecycle.
+
+In the next chapter, explore how **legal holds** can be used to further protect regulated data.
