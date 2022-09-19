@@ -17,7 +17,7 @@ In this chapter, explore the configurations of the pre-provisioned buckets.
 
 ![](_attachments/StorageResourceList.png)
 
-5. Click **{COS.bucket-1}}** in the **Buckets** table.
+5. Click **{{COS.bucket-1}}** in the **Buckets** table.
 
 ![](_attachments/BucketList.png)
 
