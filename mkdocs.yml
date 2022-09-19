@@ -37,8 +37,9 @@ nav:
     - 'Click through demonstration of a COS bucket being created': 'Part 6/03 ClickThru.md'
   - Part 7 - Create COS objects:
     - 'Introduction': 'Part 7/01 Introduction.md'
-    - 'Manage regulated content': 'Part 7/02 Manage regulated content.md'
-    - 'Legal holds': 'Part 7/03 Legal holds.md'
+    - 'Explore bucket configuration': 'Part 7/02 Explore bucket configuration.md'
+    - 'Manage regulated content': 'Part 7/03 Manage regulated content.md'
+    - 'Legal holds': 'Part 7/04 Legal holds.md'
   - Part 8 - Using COS Command Line Interfaces:
     - 'Introduction': 'Part 8/01 Introduction.md'
     - 'Manage regulated content': 'Part 8/02 Manage regulated content with COS CLIs.md'

@@ -1,9 +1,3 @@
-To be written
+The next step is to create an **Activity Tracker** instance. In the Regulated Archive scenario, IBM Cloud Activity Tracker is used to investigate abnormal activity and critical actions, and comply with regulatory audit requirements. Learn more about **Activity Tracker** <a href="https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-getting-started" target="_blank">here</a>.
 
-Activity Tracker
-
-Reference "selecting your IBM cloud activity tracker offering" in docs: https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-about#select_offering to pick the right offering
-
-The events comply with the Cloud Auditing Data Federation (CADF) standard
-
-Activity Tracker Event Routing can only route events that are generated in supported regions. Other regions, where Activity Tracker Event Routing is not available, continue to manage events by using Activity Tracker Event Routing hosted event search.
+By default, COS bucket management events are collected automatically, but collection of data events is optional. Each bucket must be configured to enable collection of data events. In this demonstration script, **Activity Tracker** is enabled to collect all COS related activity. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard.
