@@ -25,7 +25,7 @@ In this chapter, a similar scenario as seen in Part 7 will be used where files w
 4. Download the script to download the images files.
 
 ```
-wget https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/includes/downloadImageFiles.bash
+wget https://raw.githubusercontent.com/IBM/SalesEnablement-COS-L3/main/docs/includes/downloadImageFiles.bash
 ```
 
 5. Execute the script to download the images files.
@@ -34,47 +34,115 @@ wget https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/includes/d
 bash ./downloadImageFiles.bash
 ```
 
-6. When prompted, enter a unique prefix to use in the file names.
+6. When prompted, enter a unique prefix to use in the file names (e.g. arj123).
+7. Verify the files now exist in the IBM Cloud Shell environment.
+
+```
+ls *.jpg
+```
+
+??? example "Example output"
+    arj123-check1.jpg  arj123-check2.jpg  arj123-check3.jpg  arj123-check4.jpg  arj123-check5.jpg  arj123-check6.jpg
+
+Next, in order to use the COS CLIs, a few configuration steps must be completed.
+
+8. Set the COS region to {{COS.serviceInstanceRegion}}.
+
+```
+ic cos config region -region "{{COS.serviceInstanceRegion}}"
+```
+
+??? example "Example output"
+    OK
+    Successfully saved default region. The program will look for buckets in the region us-south.
+
+9. List the COS CLI configuration information.
+
+```
+ic cos config list
+```
+
+??? example "Example output"
+    OK
+
+<!-- 10. Retrive the Cloud Resource Name (CRN) for the COS service instance {{COS.serviceInstanceName}}.
+
+```
+ic resource service-instance {{COS.serviceInstanceID}}}} --id
+```
+
+??? example "Example output"
+    Retrieving service instance 7ae313ac-9571-4bf6-bc55-aea286699a31 in all resource groups under account ITZ - ADHOC03 as andrew@jones-tx.com...
+    crn:v1:bluemix:public:kms:us-south:a/934360f4a07b734c569d05a94f71816e:7ae313ac-9571-4bf6-bc55-aea286699a31:: 7ae313ac-9571-4bf6-bc55-aea286699a31 -->
+
+The actual value needed to complete the COS CLI configuration is the valuke after the last two (2) colons. The next command will save the value in an environment variable and then set the CRN in the COS CLI configuration.
+
+13. Set Cloud Resource Name (CRN) for the COS CLI configuration to the COS service instance ID **{{COS.serviceInstanceID}}.
+
+```
+ic cos config crn --crn ${{COS.serviceInstanceID}}
+```
+
+??? example "Example output"
+    Saving new Service Instance ID...
+    OK
+    Successfully stored your service instance ID.
+
+14. Verify CRN is set in COS CLI configuration.
+
+```
+ic cos config list
+```
+
+??? example "Example output"
+    Key                     Value
+    Last Updated            Monday, September 19 2022 at 21:24:46
+    Default Region          us-south
+    Download Location       /home/andrew/Downloads
+    CRN                     7ae313ac-9571-4bf6-bc55-aea286699a31
+    AccessKeyID
+    SecretAccessKey
+    Authentication Method   IAM
+    URL Style               VHost
+    Service Endpoint
+
+15. List the **storage class** of the COS bucket.
+
+```
+ic cos bucket-class-get -bucket {{COS.bucket1}}
+```
+
+??? example "Example output"
+    OK
+    Details about bucket cos-l3-bucket-1:
+    Region: us-south
+    Class: Smart
+
+16. List the current content of a bucket.
+
+```
+ic cos objects --bucket {{COS.bucket1}}
+```
+
+??? example "Example output"
+    OK
+    Found 2 objects in bucket 'cos-l3-with-retention':
+
+    Name                Last Modified              Object Size
+    arj123-check2.jpg   Sep 19, 2022 at 17:28:14   101.41 KiB
+    arj123-check3.jpg   Sep 19, 2022 at 20:07:32   83.08 KiB
+
+17. Upload a file to the COS bucket.
+
+The next command has 2 parameters that will need to be updated prior to executing them. The **-key** option specifies the filename for the object in COS.  The **-body** option specifies the local file to be uploaded.  A unique **-key** must be specified. In the command below, change **arj123-check4.jpg** to one of the files you downloaded earlier. Be sure to select a file that has not already been uploaded.
+
+```
+ic cos object-put —bucket {{COS.bucket1}} —-key arj123-check4.jpg —-body arj123-check4.jpg
+```
+
+??? example "Example output"
 
 
-
-
-
-> ic cos config region —region “us-south”
-
-# enter “us-south”
-
-> ic cos config list
-
-> ic resource service-instance COS-L3-service --id
-
-
-Retrieving service instance COS-L3-service in all resource groups under account IBM DTE Cloud Platform as andrew@jones-tx.com...
-crn:v1:bluemix:public:cloud-object-storage:global:a/934360f4a07b734c569d05a94f71816e:f0a3293e-28ee-416e-b412-86d25c84f7df:: f0a3293e-28ee-416e-b412-86d25c84f7df
-
-# need to use the CRN after the ::  f0a3293e-28ee-416e-b412-86d25c84f7df
-
-> ic cos config crn --crn f0a3293e-28ee-416e-b412-86d25c84f7df
-
-
-> ic cos buckets
-
-OK
-2 buckets found in your account:
-
-Name                 Date Created
-cos-l3-bucket-1      Sep 07, 2022 at 17:42:39
-cos-l3-shortbucket   Sep 07, 2022 at 19:30:20
-
-> ic cos objects --bucket cos-l3-bucket-1
-OK
-Found 4 objects in bucket 'cos-l3-bucket-1':
-
-Name                   Last Modified              Object Size
-SuperSecretData.rtf    Sep 07, 2022 at 19:03:07   411 B
-SuperSecretData2.rtf   Sep 07, 2022 at 19:07:03   443 B
-image (5).png          Sep 08, 2022 at 21:35:19   58.81 KiB
-slack.gif              Sep 08, 2022 at 19:49:41   897.70 KiB
 
 
 
@@ -103,25 +171,3 @@ ls -l arj.txt
 ic cos object-put —bucket cos-l3-bucket-1 —key arj.txt —body arj.txt
 
 # above uses default retention period
-
-
-
-
-# do curl stuff??
-
-https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-curl
-
-
-ibmcloud iam api-key-create MyKey -d "this is my API key" --file key_file
-
-# using apices value from above output
-
-curl -X "POST" "https://iam.cloud.ibm.com/oidc/token"      -H 'Accept: application/json'      -H 'Content-T
-ype: application/x-www-form-urlencoded'      --data-urlencode "apikey=INSERTKEYHERE"      --data-
-urlencode "response_type=cloud_iam"      --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey"
-
-
-
-# get public end point from portal
-
-#s3.us-south.cloud-object-storage.appdomain.cloud

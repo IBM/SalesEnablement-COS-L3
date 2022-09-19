@@ -67,4 +67,4 @@ Now that the **legal hold** has been removed, the object can be deleted as it's 
 
 Technical sellers should proceed to Part 8 and explore the COS command line interfaces (CLIs).
 
-That concludes the required parts of the demonstration script for IBM and Business Partners Sales. All are encouraged to complete Parts 8 and 9, but at this time IBM and Business Partners Sales may skip to [**Next steps**](../Next steps.md).
+That concludes the required parts of the demonstration script for IBM and Business Partners Sales. All are encouraged to complete Parts 8 and 9, but at this time IBM and Business Partners Sales may skip to [**Next steps**](../NextSteps.md).
