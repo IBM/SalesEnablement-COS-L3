@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#macro-rendering-error" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -714,8 +709,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Manage regulated content
@@ -888,8 +881,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -903,18 +894,154 @@
                 
 
 
-<h1 id="macro-rendering-error"><em>Macro Rendering Error</em></h1>
-<p><strong>UndefinedError</strong>: 'bucket' is undefined</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Traceback (most recent call last):
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  File &quot;/usr/local/lib/python3.9/site-packages/mkdocs_macros/plugin.py&quot;, line 480, in render
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    return md_template.render(**page_variables)
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 1301, in render
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    self.environment.handle_exception()
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 936, in handle_exception
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    raise rewrite_traceback_stack(source=source)
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  File &quot;&lt;template&gt;&quot;, line 10, in top-level template code
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>jinja2.exceptions.UndefinedError: &#39;bucket&#39; is undefined
-</code></pre></div>
+  <h1>Manage regulated content</h1>
+
+<p>To complete the next steps, users will be utilizing three (3) browser windows:</p>
+<ol>
+<li>Browser window with this demonstration site_description</li>
+<li>Browser window with IBM Cloud Portal accessing the COS bucket user Interfaces</li>
+<li>Browser window with IBM Cloud Activity tracker</li>
+</ol>
+<p>Once all windows are started, arrange them on separate monitors if available or resize the windows so they are all visible at same time. Note, each page utilizes reactive web interfaces which when resized by hide certain menus or icons.</p>
+<ol>
+<li>
+<p>If not already opened from previous exercise, open a browser window to the cos-l3-with-retention page <a href="https://cloud.ibm.com/objectstorage/crn%3Av1%3Abluemix%3Apublic%3Acloud-object-storage%3Aglobal%3Aa%2Fba0e33c9056f470ca19de009747ec654%3A43d07b21-b680-4d31-9d51-178f582d630c%3A%3A?bucket=cos-l3-with-retention&bucketRegion=us-south&endpoint=s3.us-south.cloud-object-storage.appdomain.cloud&paneId=bucket_overview" target="_blank">here</a>.</p>
+</li>
+<li>
+<p>Open the IBM Cloud Portal Activity Tracker page: <a href="https://cloud.ibm.com/observe/activitytracker" target="_blank">https://cloud.ibm.com/observe/activitytracker</a>.</p>
+</li>
+<li>
+<p>Click COS-L3-activity-tracker in the table.</p>
+</li>
+</ol>
+<p><img alt="" src="../_attachments/ActivityTracker.png" /></p>
+<p>After the Activity Tracker details page loads, take note of the <strong>7 day Event Search</strong> plan utilized.</p>
+<ol start="4">
+<li>Click <strong>Open Dashboard</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/ATDetails.png" /></p>
+<p>The <strong>Activity Tracker</strong> Dashboard will open in a new browser tab or window.</p>
+<p>This demonstration script prescriptively specifies steps to take in the <strong>Activity Tracker</strong> Dashboard. Learn more about using <strong>Activity Tracker</strong> <a href="https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-getting-started-search" target="_blank">here</a>.</p>
+<ol start="5">
+<li>Click the <strong>Sources</strong> pulldown menu, check the <strong>cloud-object-storage</strong> checkbox, and click <strong>Apply</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/ATFilter.png" /></p>
+<p>In this step, a filter for <strong>Activity Tracker</strong> is set to minimize the events displayed to only those related to COS. Using filters is very useful, especially when a lot of events are being triggered.</p>
+<p>At this time, there may or may not be events displayed in the <strong>Activity Tracker</strong> Dashboard. Don't worry if there are not any at this point.</p>
+<ol start="6">
+<li>If possible, arrange the two browsers windows side-by-side such that both the <strong>Activity Tracker</strong> Dashboard and the IBM Cloud Portal page for the cos-l3-with-retention are visible.</li>
+</ol>
+<p><img alt="" src="../_attachments/SideBySide.png" /></p>
+<ol start="7">
+<li>Click the <strong>Upload</strong> button.</li>
+</ol>
+<p><img alt="" src="../_attachments/ObjectUpload.png" /></p>
+<ol start="8">
+<li>Click the <strong>Upload files</strong> button.</li>
+</ol>
+<p><img alt="" src="../_attachments/ObjectUploadDialog.png" /></p>
+<ol start="9">
+<li>In the <strong>Choose Files to Upload</strong> dialog, select the first file to upload to COS, and click <strong>Upload</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/FileUploadDialog.png" /></p>
+<ol start="10">
+<li>Click the up arrow next to the <strong>Organize your objects (advanced)</strong> section of the Upload dialog.</li>
+</ol>
+<p><img alt="" src="../_attachments/ObjectUploadDialog2.png" /></p>
+<ol start="11">
+<li>Scroll down to the <strong>Retention</strong> section of the <strong>Organize your objects (advanced)</strong> section.</li>
+</ol>
+<p><img alt="" src="../_attachments/ObjectUploadRetention.png" /></p>
+<p>A couple of items to note.  The default <strong>Duration</strong> is set to 1 day.  Recall this from the <strong>bucket</strong> settings.  Also note, the <strong>eligible for deletion</strong> date which should align with the maximum retention value of the <strong>bucket</strong>.</p>
+<ol start="12">
+<li>Change the <strong>Duration</strong> field from <strong>1</strong> to <strong>0</strong> days and click <strong>Upload</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/ObjectUploadObject.png" /></p>
+<p>A <strong>Transfers</strong> dialog will appear and a <strong>Success</strong>  message should also be displayed.  Clear these by clicking the <strong>x</strong> for each dialog. Additionally, now in the bucket details table, the newly upload object should be listed. Note, use the table search or use the <strong>Object name</strong> sort option in the table to find the uploaded object.</p>
+<ol start="13">
+<li>
+<p>Switch to the <strong>Activity Tracker</strong> Dashboard.</p>
+</li>
+<li>
+<p>Click to the left of the <strong>create object</strong> event in the Dashboard.</p>
+</li>
+</ol>
+<p><img alt="" src="../_attachments/ATObjectCreate.png" /></p>
+<p>Note, the <strong>create object</strong> event should be towards the bottom of the listing. Once located, click just to the left of the line in the table.  This will expand the entry.</p>
+<p><img alt="" src="_attachments/ATObjectCreateDetails.png" /></p>
+<ol start="13">
+<li>Click the object name for the newly uploaded object.</li>
+</ol>
+<p><img alt="" src="../_attachments/UploadedObjects.png" /></p>
+<p>Examine the details that <strong>Activity Tracker</strong> recorded for the creation of the object. As highlighted in the image above, note the <strong>action</strong> that caused the event to be tracked, who the <strong>initiator</strong> was, the <strong>reason</strong> code, and the <strong>objectLifecycle</strong> information.</p>
+<ol start="14">
+<li>In the IBM Cloud Portal, click the <strong>checkbox</strong> next to the uploaded file.</li>
+</ol>
+<p><img alt="" src="../_attachments/ObjectSelected.png" /></p>
+<p>Notice the two new options available: <strong>Download objects</strong> and <strong>Delete objects</strong>.</p>
+<ol start="15">
+<li>Click <strong>Download objects</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/DownloadDialog.png" /></p>
+<p>The <strong>Transfers</strong> dialog shows the download progress and success.  Dismiss the <strong>Transfers</strong> dialog by clicking the <strong>X</strong> at top right.</p>
+<ol start="16">
+<li>Select the filename again, and click <strong>Delete objects</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/ObjectSelected2.png" /></p>
+<p>Based upon the retention policies specified for this object and the bucket, can the object be deleted at this time?</p>
+<ol start="17">
+<li>Click the <strong>Delete</strong> button.</li>
+</ol>
+<p><img alt="" src="../_attachments/DeleteDialog.png" /></p>
+<p>Since the object was uploaded with a <strong>0 Day</strong> retention, it can be deleted.</p>
+<ol start="18">
+<li>
+<p>Switch to the <strong>Activity Tracker</strong> Dashboard.</p>
+</li>
+<li>
+<p>Find and expand the two (2) <strong>delete</strong> events in the Dashboard.</p>
+</li>
+</ol>
+<p><img alt="" src="../_attachments/ATObjectDelete.png" /></p>
+<p>Once located, click just to the left of each line in the table.  This will expand the entry.</p>
+<p><img alt="" src="_attachments/ATObjectCreateDetails.png" /></p>
+<p>Take note of the details that <strong>Activity Tracker</strong> logged.</p>
+<p><strong>Next, repeat steps seven (7) through 12 to upload another file to COS, but this time set the Duration to a value between one (1) and size (6).</strong> Recall, the maximum retention period for the bucket is set to 6.</p>
+<p><img alt="" src="../_attachments/UploadObject2.png" /></p>
+<p>What will happen if an attempt is made to delete this recently uploaded file?</p>
+<ol start="20">
+<li>Select the newly uploaded file and click <strong>Delete objects</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/DeleteObject2.png" /></p>
+<ol start="21">
+<li>Click <strong>Delete</strong> in the <strong>Delete object</strong> dialog.</li>
+</ol>
+<p>Did the <strong>delete</strong> succeed? Why not?</p>
+<p>A message the like the image below should be displayed stating the delete did not succeed "due to an attached policy".</p>
+<p><img alt="" src="../_attachments/DeleteObject2Failed.png" /></p>
+<ol start="22">
+<li>
+<p>Switch to the <strong>Activity Tracker</strong> Dashboard.</p>
+</li>
+<li>
+<p>Locate the two (2) new <strong>delete</strong> events in the Dashboard.</p>
+</li>
+</ol>
+<p>Note, these should show a <strong>warning</strong> status instead of <strong>normal</strong>.</p>
+<p><img alt="" src="../_attachments/ATDeleteObject2Failed.png" /></p>
+<ol start="24">
+<li>Expand the first event <strong>delete</strong> event in the Dashboard by clicking just to the left of the entry.</li>
+</ol>
+<p><img alt="" src="../_attachments/ATDeleteObject2Failed2.png" /></p>
+<p>Notice the following fields in the event that are now audit ready.</p>
+<p><img alt="" src="_attachments/ATDeleteObject2FailedDetails.png" /></p>
+<p>Because the expiration for the object was set with a three (3) day retention period, the object can not be removed. This object will remain in COS until either one of the following two actions occur:</p>
+<ul>
+<li>The object is deleted after the 3 day retention period by someone with appropriate permissions.</li>
+<li>The object is automatically deleted after the 7 day expiry occurs that is set on the bucket.</li>
+</ul>
+<p>Note, objects stored in a bucket that have a retention policy set are not automatically deleted after that retention policy is met. Objects must either be manually deleted or an expiration rule must be set as part of the bucket's lifecycle.</p>
+<p>In the next chapter, explore how <strong>legal holds</strong> can be used to further protect regulated data.</p>
 
 
 
