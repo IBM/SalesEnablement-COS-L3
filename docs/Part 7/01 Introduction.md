@@ -18,11 +18,11 @@ For this demonstration script, users should create 4 to 6 small files that will 
 !!! important
     When saving the file, add a unique prefix to the file name. For example, save check1.jpg as arj123_check1.jpg.  Using a unique prefix will avoid file name conflicts with others using this shared environment.
 
-https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check1.jpg
-https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check2.jpg
-https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check3.jpg
-https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check4.jpg
-https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check5.jpg
-https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check6.jpg
+<a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check1.jpg" target="_blank">check1.jpg</a>
+<a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check2.jpg" target="_blank">check2.jpg</a>
+<a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check3.jpg" target="_blank">check3.jpg</a>
+<a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check4.jpg" target="_blank">check4.jpg</a>
+<a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check5.jpg" target="_blank">check5.jpg</a>
+<a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check6.jpg" target="_blank">check6.jpg</a>
 
 ![](_attachments/checkDownloadListing.png)

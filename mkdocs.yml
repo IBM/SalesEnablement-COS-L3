@@ -105,15 +105,15 @@ extra:
     serviceInstanceLocation: "Dallas (us-south)"
     serviceInstanceRegion: "us-south"
     serviceEndpoint: "s3.us-south.cloud-object-storage.appdomain.cloud"
-    foo-1: "cos-l3-with-retention"
-    bucket-1-storageClass: "Smart Tier"
-    bucket-1-retentionPolicy: true
-    bucket-1-minimumRetention: "0"
-    bucket-1-defaultRetention: "1"
-    bucket-1-maximumRetention: "7"
-    bucket-2: "cos-l3-without-retention"
-    bucket-2-storageClass: "Smart Tier"
-    bucket-2-retentionPolicy: false
+    bucket1: "cos-l3-with-retention"
+    bucket1storageClass: "Smart Tier"
+    bucket1retentionPolicy: true
+    bucket1minimumRetention: "0"
+    bucket1defaultRetention: "1"
+    bucket1maximumRetention: "7"
+    bucket2: "cos-l3-without-retention"
+    bucket2storageClass: "Smart Tier"
+    bucket2retentionPolicy: false
 
   ActivityTracker:
     serviceLocation: "Dallas (us-south)"

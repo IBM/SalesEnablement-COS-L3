@@ -17,7 +17,7 @@ In this chapter, explore the configurations of the pre-provisioned buckets.
 
 ![](_attachments/StorageResourceList.png)
 
-5. Click **{{COS.bucket-1}}** in the **Buckets** table.
+5. Click **{{COS.bucket1}} in the **Buckets** table.
 
 ![](_attachments/BucketList.png)
 
@@ -35,4 +35,4 @@ At this point, explore the various sections on the **Configuration** page for th
 !!! Reminder
     Users have limited permissions in the shared environment, so options to modify the bucket are disabled.
 
-Take a few minutes to explore the configuration settings of the other pre-provisioned bucket: **{{COS.bucket-2}}**.
+Take a few minutes to explore the configuration settings of the other pre-provisioned bucket: **{{COS.bucket2}}**.
