@@ -7,7 +7,7 @@ To complete the next steps, users will be utilizing three (3) browser windows:
 Once all windows are started, arrange them on separate monitors if available or resize the windows so they are all visible at same time. Note, each page utilizes reactive web interfaces which when resized by hide certain menus or icons.
 
 
-1. If not already opened from previous exercise, open a browser window to the {{COS-bucket-1}} page <a href="https://cloud.ibm.com/objectstorage/crn%3Av1%3Abluemix%3Apublic%3Acloud-object-storage%3Aglobal%3Aa%2Fba0e33c9056f470ca19de009747ec654%3A43d07b21-b680-4d31-9d51-178f582d630c%3A%3A?bucket=cos-l3-with-retention&bucketRegion=us-south&endpoint=s3.us-south.cloud-object-storage.appdomain.cloud&paneId=bucket_overview" target="_blank">here</a>.
+1. If not already opened from previous exercise, open a browser window to the {{COS.bucket1}} page <a href="https://cloud.ibm.com/objectstorage/crn%3Av1%3Abluemix%3Apublic%3Acloud-object-storage%3Aglobal%3Aa%2Fba0e33c9056f470ca19de009747ec654%3A43d07b21-b680-4d31-9d51-178f582d630c%3A%3A?bucket=cos-l3-with-retention&bucketRegion=us-south&endpoint=s3.us-south.cloud-object-storage.appdomain.cloud&paneId=bucket_overview" target="_blank">here</a>.
 
 
 2. Open the IBM Cloud Portal Activity Tracker page: <a href="https://cloud.ibm.com/observe/activitytracker" target="_blank">https://cloud.ibm.com/observe/activitytracker</a>.
@@ -34,7 +34,7 @@ In this step, a filter for **Activity Tracker** is set to minimize the events di
 
 At this time, there may or may not be events displayed in the **Activity Tracker** Dashboard. Don't worry if there are not any at this point.
 
-6. If possible, arrange the two browsers windows side-by-side such that both the **Activity Tracker** Dashboard and the IBM Cloud Portal page for the {{COS-bucket-1}} are visible.
+6. If possible, arrange the two browsers windows side-by-side such that both the **Activity Tracker** Dashboard and the IBM Cloud Portal page for the {{COS.bucket1}} are visible.
 
 ![](_attachments/SideBySide.png)
 
