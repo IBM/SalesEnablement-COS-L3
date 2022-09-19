@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#enter-us-south" class="md-skip">
+        <a href="#when-trying-to-delete-with-write-access-get" class="md-skip">
           Skip to content
         </a>
       
@@ -929,7 +929,7 @@
 <ol start="4">
 <li>Download the script to download the images files.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wget https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/includes/downloadImageFiles.bash
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wget https://raw.githubusercontent.com/IBM/SalesEnablement-COS-L3/main/docs/includes/downloadImageFiles.bash
 </code></pre></div>
 <ol start="5">
 <li>Execute the script to download the images files.</li>
@@ -937,38 +937,108 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bash ./downloadImageFiles.bash
 </code></pre></div>
 <ol start="6">
-<li>When prompted, enter a unique prefix to use in the file names.</li>
+<li>When prompted, enter a unique prefix to use in the file names (e.g. arj123).</li>
+<li>Verify the files now exist in the IBM Cloud Shell environment.</li>
 </ol>
-<blockquote>
-<p>ic cos config region —region “us-south”</p>
-</blockquote>
-<h1 id="enter-us-south">enter “us-south”</h1>
-<blockquote>
-<p>ic cos config list</p>
-<p>ic resource service-instance COS-L3-service --id</p>
-</blockquote>
-<p>Retrieving service instance COS-L3-service in all resource groups under account IBM DTE Cloud Platform as andrew@jones-tx.com...
-crn:v1:bluemix:public:cloud-object-storage:global:a/934360f4a07b734c569d05a94f71816e:f0a3293e-28ee-416e-b412-86d25c84f7df:: f0a3293e-28ee-416e-b412-86d25c84f7df</p>
-<h1 id="need-to-use-the-crn-after-the-f0a3293e-28ee-416e-b412-86d25c84f7df">need to use the CRN after the ::  f0a3293e-28ee-416e-b412-86d25c84f7df</h1>
-<blockquote>
-<p>ic cos config crn --crn f0a3293e-28ee-416e-b412-86d25c84f7df</p>
-<p>ic cos buckets</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ls *.jpg
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>arj123-check1.jpg  arj123-check2.jpg  arj123-check3.jpg  arj123-check4.jpg  arj123-check5.jpg  arj123-check6.jpg</p>
+</details>
+<p>Next, in order to use the COS CLIs, a few configuration steps must be completed.</p>
+<ol start="8">
+<li>Set the COS region to us-south.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ic cos config region -region &quot;us-south&quot;
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
 <p>OK
-2 buckets found in your account:</p>
-<p>Name                 Date Created
-cos-l3-bucket-1      Sep 07, 2022 at 17:42:39
-cos-l3-shortbucket   Sep 07, 2022 at 19:30:20</p>
-<blockquote>
-<p>ic cos objects --bucket cos-l3-bucket-1
+Successfully saved default region. The program will look for buckets in the region us-south.</p>
+</details>
+<ol start="9">
+<li>List the COS CLI configuration information.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ic cos config list
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>OK</p>
+</details>
+<!-- 10. Retrive the Cloud Resource Name (CRN) for the COS service instance COS-L3-service.
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ic resource service-instance 7ae313ac-9571-4bf6-bc55-aea286699a31}} --id
+</code></pre></div>
+
+??? example "Example output"
+    Retrieving service instance 7ae313ac-9571-4bf6-bc55-aea286699a31 in all resource groups under account ITZ - ADHOC03 as andrew@jones-tx.com...
+    crn:v1:bluemix:public:kms:us-south:a/934360f4a07b734c569d05a94f71816e:7ae313ac-9571-4bf6-bc55-aea286699a31:: 7ae313ac-9571-4bf6-bc55-aea286699a31 -->
+
+<p>The actual value needed to complete the COS CLI configuration is the valuke after the last two (2) colons. The next command will save the value in an environment variable and then set the CRN in the COS CLI configuration.</p>
+<ol start="13">
+<li>Set Cloud Resource Name (CRN) for the COS CLI configuration to the COS service instance ID **7ae313ac-9571-4bf6-bc55-aea286699a31.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ic cos config crn --crn $7ae313ac-9571-4bf6-bc55-aea286699a31
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>Saving new Service Instance ID...
 OK
-Found 4 objects in bucket 'cos-l3-bucket-1':</p>
-</blockquote>
-<p>Name                   Last Modified              Object Size
-SuperSecretData.rtf    Sep 07, 2022 at 19:03:07   411 B
-SuperSecretData2.rtf   Sep 07, 2022 at 19:07:03   443 B
-image (5).png          Sep 08, 2022 at 21:35:19   58.81 KiB
-slack.gif              Sep 08, 2022 at 19:49:41   897.70 KiB</p>
+Successfully stored your service instance ID.</p>
+</details>
+<ol start="14">
+<li>Verify CRN is set in COS CLI configuration.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ic cos config list
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>Key                     Value
+Last Updated            Monday, September 19 2022 at 21:24:46
+Default Region          us-south
+Download Location       /home/andrew/Downloads
+CRN                     7ae313ac-9571-4bf6-bc55-aea286699a31
+AccessKeyID
+SecretAccessKey
+Authentication Method   IAM
+URL Style               VHost
+Service Endpoint</p>
+</details>
+<ol start="15">
+<li>List the <strong>storage class</strong> of the COS bucket.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ic cos bucket-class-get -bucket cos-l3-with-retention
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>OK
+Details about bucket cos-l3-bucket-1:
+Region: us-south
+Class: Smart</p>
+</details>
+<ol start="16">
+<li>List the current content of a bucket.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ic cos objects --bucket cos-l3-with-retention
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>OK
+Found 2 objects in bucket 'cos-l3-with-retention':</p>
+<p>Name                Last Modified              Object Size
+arj123-check2.jpg   Sep 19, 2022 at 17:28:14   101.41 KiB
+arj123-check3.jpg   Sep 19, 2022 at 20:07:32   83.08 KiB</p>
+</details>
+<ol start="17">
+<li>Upload a file to the COS bucket.</li>
+</ol>
+<p>The next command has 2 parameters that will need to be updated prior to executing them. The <strong>-key</strong> option specifies the filename for the object in COS.  The <strong>-body</strong> option specifies the local file to be uploaded.  A unique <strong>-key</strong> must be specified. In the command below, change <strong>arj123-check4.jpg</strong> to one of the files you downloaded earlier. Be sure to select a file that has not already been uploaded.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ic cos object-put —bucket cos-l3-with-retention —-key arj123-check4.jpg —-body arj123-check4.jpg
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+</details>
 <h1 id="when-trying-to-delete-with-write-access-get">when trying to delete with Write access get:</h1>
 <p>andrew@cloudshell:~$ ic cos object-delete --bucket cos-l3-bucket-1 --key "slack.gif"
 WARNING: This will permanently delete the object 'slack.gif' from the bucket 'cos-l3-bucket-1'.
@@ -982,15 +1052,6 @@ InvalidRequestForLegalReasons: The object is protected
 ls -l arj.txt</p>
 <p>ic cos object-put —bucket cos-l3-bucket-1 —key arj.txt —body arj.txt</p>
 <h1 id="above-uses-default-retention-period">above uses default retention period</h1>
-<h1 id="do-curl-stuff">do curl stuff??</h1>
-<p>https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-curl</p>
-<p>ibmcloud iam api-key-create MyKey -d "this is my API key" --file key_file</p>
-<h1 id="using-apices-value-from-above-output">using apices value from above output</h1>
-<p>curl -X "POST" "https://iam.cloud.ibm.com/oidc/token"      -H 'Accept: application/json'      -H 'Content-T
-ype: application/x-www-form-urlencoded'      --data-urlencode "apikey=INSERTKEYHERE"      --data-
-urlencode "response_type=cloud_iam"      --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey"</p>
-<h1 id="get-public-end-point-from-portal">get public end point from portal</h1>
-<h1 id="s3us-southcloud-object-storageappdomaincloud">s3.us-south.cloud-object-storage.appdomain.cloud</h1>
 
 
 

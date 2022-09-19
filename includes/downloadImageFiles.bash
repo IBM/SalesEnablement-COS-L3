@@ -5,6 +5,8 @@ read prefix
 
 for i in 1 2 3 4 5 6
 do
-  wget https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/includes/checkImages/check${i}.jpg
+  wget https://github.com/IBM/SalesEnablement-COS-L3/blob/main/docs/includes/checkImages/check${i}.jpg
   mv check${i}.jpg ${prefix}-check${i}.jpg
 done
+
+exit
