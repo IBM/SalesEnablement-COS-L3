@@ -514,14 +514,14 @@
       
       
         <label class="md-nav__link" for="__nav_6">
-          Part 5 - Create a Activity Tracker service
+          Part 5 - Create an Activity Tracker service
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Part 5 - Create a Activity Tracker service" data-md-level="1">
+      <nav class="md-nav" aria-label="Part 5 - Create an Activity Tracker service" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          Part 5 - Create a Activity Tracker service
+          Part 5 - Create an Activity Tracker service
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -697,7 +697,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%207/02%20Manage%20regulated%20content/" class="md-nav__link">
+      <a href="../../Part%207/02%20Explore%20bucket%20configuration/" class="md-nav__link">
+        Explore bucket configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part 7/03 Manage regulated content.md" class="md-nav__link">
         Manage regulated content
       </a>
     </li>
@@ -711,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%207/03%20Legal%20holds/" class="md-nav__link">
+      <a href="../../Part%207/04%20Legal%20holds/" class="md-nav__link">
         Legal holds
       </a>
     </li>
@@ -882,7 +896,11 @@
 
   <h1>Introduction</h1>
 
-<p>To be written</p>
+<p>The next step is to create a <strong>Key Protect service</strong> and a <strong>Root Key</strong>. In the Regulated Archive scenario, <strong>Key Protect</strong> and COS work together to help protect the regulated data while at rest. This added protection encrypts the data encryption keys (DEKs) associated with the COS. To completely understand the COS and Key Protect integration works, go <a href="https://cloud.ibm.com/docs/key-protect?topic=key-protect-integrate-cos#kp-cos-how" target="_blank">here</a>.</p>
+<p>In this scenario, IBM Key Protect is used. In other client scenarios, IBM Hyper Protect Crypto Services may be required.</p>
+<p>IBM Key Protect for IBM Cloud is a full-service encryption solution that allows data to be secured and stored in IBM Cloud using the latest envelope encryption techniques that leverage FIPS 140-2 Level 3 certified cloud-based hardware security modules. Learn more about IBM Key Protect <a href="https://www.ibm.com/cloud/key-protect?mhsrc=ibmsearch_a&mhq=IBM%20Key%20Protect" target="_blank">here</a>.</p>
+<p>Learn more about IBM Hyper Protect Crypto Services <a href="https://www.ibm.com/cloud/hyper-protect-crypto?mhsrc=ibmsearch_a&mhq=hyper%20protect%20crypto%20services" target="_blank">here</a> and its ability to rovide a higher level of security like <a href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/34" target="_blank">FIPS 140-2 Level 4</a>.</p>
+<p><strong>Key Protect services</strong> are specific to a IBM Cloud location. In this demonstration, a new <strong>Root Key</strong> will be generated via the IBM Cloud Portal, but <strong>Key Protect</strong> also supports Bring Your Own Key (BYOK).</p>
 
 
 

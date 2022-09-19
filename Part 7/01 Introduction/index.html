@@ -504,14 +504,14 @@
       
       
         <label class="md-nav__link" for="__nav_6">
-          Part 5 - Create a Activity Tracker service
+          Part 5 - Create an Activity Tracker service
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Part 5 - Create a Activity Tracker service" data-md-level="1">
+      <nav class="md-nav" aria-label="Part 5 - Create an Activity Tracker service" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          Part 5 - Create a Activity Tracker service
+          Part 5 - Create an Activity Tracker service
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -697,7 +697,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../02%20Manage%20regulated%20content/" class="md-nav__link">
+      <a href="../02%20Explore%20bucket%20configuration/" class="md-nav__link">
+        Explore bucket configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part 7/03 Manage regulated content.md" class="md-nav__link">
         Manage regulated content
       </a>
     </li>
@@ -711,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03%20Legal%20holds/" class="md-nav__link">
+      <a href="../04%20Legal%20holds/" class="md-nav__link">
         Legal holds
       </a>
     </li>
@@ -882,8 +896,32 @@
 
   <h1>Introduction</h1>
 
-<p>To be written</p>
-<p>Add a warning that any file they upload will be downloadable and viewable by other IBM and Business Partners utilizing the shared environment.  Suggest they use small graphic or text files with non-confidential, non-proprietary content. They must also provide unique names so suggest they use their initials or email address as part of the filename.</p>
+<p>Now that all the provisioning and configuration of the environment is complete, it is time to utilize COS as part of a regulated archive solution. Specifically, the scenario will be:</p>
+<ul>
+<li>ingest data into COS</li>
+<li>specify object-specific retention durations</li>
+<li>place legal holds on data</li>
+<li>restore data</li>
+<li>attempt to delete data from COS to validate retention policies and legal holds are honored</li>
+</ul>
+<p>And while performing the above steps, <strong>Activity Tracker</strong> will be leveraged to validate the audit readiness of the actions performed.</p>
+<p>Before getting started, a few important notes. As mentioned before, this is a shared environment. All users of the environment have the ability to upload, download, and delete all content added to the pre-provisioned buckets. Users should only work with objects they create. Do NOT upload any files that contain confidential or proprietary information. Note also, as a safeguard, all uploaded objects will be removed after 7 days using an expiry rule set on the COS bucket.</p>
+<p>For this demonstration script, users should create 4 to 6 small files that will be uploaded to COS. While COS will accept any tile type and files can be very large, users are encouraged to utilize small files to minimize upload times. The following links can be used to download 6 sample bank checks that can be used. To download, right click on the links below and depending on browser select:</p>
+<ul>
+<li>"Save link as" - Chrome and Firefox</li>
+<li>"Download linked file as" - Safari</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When saving the file, add a unique prefix to the file name. For example, save check1.jpg as arj123_check1.jpg.  Using a unique prefix will avoid file name conflicts with others using this shared environment.</p>
+</div>
+<p>https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check1.jpg
+https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check2.jpg
+https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check3.jpg
+https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check4.jpg
+https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check5.jpg
+https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check6.jpg</p>
+<p><img alt="" src="../_attachments/checkDownloadListing.png" /></p>
 
 
 
@@ -918,13 +956,13 @@
       
       
         
-        <a href="../02%20Manage%20regulated%20content/" class="md-footer__link md-footer__link--next" aria-label="Next: Manage regulated content" rel="next">
+        <a href="../02%20Explore%20bucket%20configuration/" class="md-footer__link md-footer__link--next" aria-label="Next: Explore bucket configuration" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Manage regulated content
+              Explore bucket configuration
             </div>
           </div>
           <div class="md-footer__button md-icon">
