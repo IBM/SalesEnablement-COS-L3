@@ -106,6 +106,7 @@ extra:
     serviceInstanceLocation: "Dallas (us-south)"
     serviceInstanceRegion: "us-south"
     serviceEndpoint: "s3.us-south.cloud-object-storage.appdomain.cloud"
+    bucket: "FOOBAR"
     bucket-1: "cos-l3-with-retention"
     bucket-1-storageClass: "Smart Tier"
     bucket-1-retentionPolicy: true
