@@ -5,7 +5,7 @@ The goal of this demonstration guide is to illustrate how to perform a demonstra
 ![](_attachments/COS-rg-seismic.png)
 
 !!! Important
-    All users of this demonstration guide should have a working knowledge of the IBM COS offering. While not a pre-requisite for the {{COS.learningplan}}, it is recommended that all users complete the IBM Cloud Object Storage Level 2 badge:
+    All users of this demonstration guide should have a working knowledge of the IBM COS offering. While not a pre-requisite for the {{learningplan.name}}, it is recommended that all users complete the IBM Cloud Object Storage Level 2 badge:
 
     - IBM LINK TO L2
     - Business Partner LINK TO L2

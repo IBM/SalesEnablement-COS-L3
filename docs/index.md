@@ -4,21 +4,23 @@ While everyone is encouraged to complete all sections of the demonstration guide
 
 - IBM Sales:
 
-  * Complete Parts 1 through 7 of this demonstration guide
-  * Record and submit a Stand and Deliver demonstration to be evaluated by management (details in the Your Learning plan)
+    * Complete Parts 1 through 7 of this demonstration guide
+    * Record and submit a Stand and Deliver demonstration to be evaluated by management (details in the Your Learning plan)
 
 - IBM Technical Sales:
 
-  * Complete **all** Parts of this demonstration guide
-  * Record and submit a Stand and Deliver demonstration to be evaluated by management (details in the Your Learning plan)
-  * Business Partner Sales
-  * Complete Parts 1 through 7 of this demonstration guide
-  * Successfully pass a 5 question quiz found in the learn.ibm.com plan
+    * Complete **all** Parts of this demonstration guide
+    * Record and submit a Stand and Deliver demonstration to be evaluated by management (details in the Your Learning plan)
 
-- Business Partner Sales
-  
-  * Complete all Parts of this demonstration guide
-  * Successfully pass a 5 question quiz found in the learn.ibm.com plan
+- Business Partner Sales:
+
+    * Complete Parts 1 through 7 of this demonstration guide
+    * Successfully pass a 5 question quiz found in the learn.ibm.com plan
+
+- Business Partner Sales:
+
+    * Complete all Parts of this demonstration guide
+    * Successfully pass a 5 question quiz found in the learn.ibm.com plan
 
 **IBM Sales and Tech Sales** must develop and record a Stand & Deliver presentation. This video is intended to simulate delivery of a “live” demo in front of a client — on camera. IBMers will have flexibility in defining a hypothetical client, the pain points the customer has, and the goals they aspire to achieve. The recording will then cover the seller’s hands-on demonstration and pitch to the client of the value of the IBM solution using the environment and techniques of this lab. Specific criteria that must be demonstrated as part of the Stand & Deliver recordings is provided within the documentation that accompanies the Level 3 course in Your Learning.
 
