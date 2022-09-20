@@ -3,10 +3,12 @@ Welcome to the {{learningplan.name}} demonstration guide! The goal of this demon
 While everyone is encouraged to complete all sections of the demonstration guide, actual completion requirements vary by role:
 
 - IBM Sales:
+
   * Complete Parts 1 through 7 of this demonstration guide
   * Record and submit a Stand and Deliver demonstration to be evaluated by management (details in the Your Learning plan)
 
 - IBM Technical Sales:
+
   * Complete **all** Parts of this demonstration guide
   * Record and submit a Stand and Deliver demonstration to be evaluated by management (details in the Your Learning plan)
   * Business Partner Sales
@@ -14,6 +16,7 @@ While everyone is encouraged to complete all sections of the demonstration guide
   * Successfully pass a 5 question quiz found in the learn.ibm.com plan
 
 - Business Partner Sales
+  
   * Complete all Parts of this demonstration guide
   * Successfully pass a 5 question quiz found in the learn.ibm.com plan
 
