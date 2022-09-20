@@ -950,91 +950,81 @@
 <ol start="8">
 <li>Set the COS region to us-south.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ic cos config region -region &quot;us-south&quot;
-</code></pre></div>
-<details class="example">
-<summary>Example output</summary>
-<p>OK
-Successfully saved default region. The program will look for buckets in the region us-south.</p>
-</details>
-<ol start="9">
-<li>List the COS CLI configuration information.</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ic cos config list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ic cos config region --region &quot;us-south&quot;
 </code></pre></div>
 <details class="example">
 <summary>Example output</summary>
 <p>OK</p>
+<p>Successfully saved default region. The program will look for buckets in the region us-south.</p>
 </details>
 <!-- 10. Retrive the Cloud Resource Name (CRN) for the COS service instance COS-L3-service.
 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ic resource service-instance 7ae313ac-9571-4bf6-bc55-aea286699a31}} --id
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ic resource service-instance 7ae313ac-9571-4bf6-bc55-aea286699a31}} --id
 </code></pre></div>
 
 ??? example "Example output"
     Retrieving service instance 7ae313ac-9571-4bf6-bc55-aea286699a31 in all resource groups under account ITZ - ADHOC03 as andrew@jones-tx.com...
     crn:v1:bluemix:public:kms:us-south:a/934360f4a07b734c569d05a94f71816e:7ae313ac-9571-4bf6-bc55-aea286699a31:: 7ae313ac-9571-4bf6-bc55-aea286699a31 -->
 
-<p>The actual value needed to complete the COS CLI configuration is the valuke after the last two (2) colons. The next command will save the value in an environment variable and then set the CRN in the COS CLI configuration.</p>
-<ol start="13">
-<li>Set Cloud Resource Name (CRN) for the COS CLI configuration to the COS service instance ID **7ae313ac-9571-4bf6-bc55-aea286699a31.</li>
+<ol start="9">
+<li>Set Cloud Resource Name (CRN) for the COS CLI configuration to the COS service instance ID **43d07b21-b680-4d31-9d51-178f582d630c.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ic cos config crn --crn $7ae313ac-9571-4bf6-bc55-aea286699a31
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ic cos config crn --crn $7ae313ac-9571-4bf6-bc55-aea286699a31
 </code></pre></div>
 <details class="example">
 <summary>Example output</summary>
-<p>Saving new Service Instance ID...
-OK
-Successfully stored your service instance ID.</p>
+<p>Saving new Service Instance ID...</p>
+<p>OK</p>
+<p>Successfully stored your service instance ID.</p>
 </details>
-<ol start="14">
+<ol start="10">
 <li>Verify CRN is set in COS CLI configuration.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ic cos config list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ic cos config list
 </code></pre></div>
 <details class="example">
 <summary>Example output</summary>
-<p>Key                     Value
-Last Updated            Monday, September 19 2022 at 21:24:46
-Default Region          us-south
-Download Location       /home/andrew/Downloads
-CRN                     7ae313ac-9571-4bf6-bc55-aea286699a31
-AccessKeyID
-SecretAccessKey
-Authentication Method   IAM
-URL Style               VHost
-Service Endpoint</p>
+<p>Key                     Value</p>
+<p>Last Updated            Monday, September 19 2022 at 21:24:46</p>
+<p>Default Region          us-south</p>
+<p>Download Location       /home/andrew/Downloads</p>
+<p>CRN                     7ae313ac-9571-4bf6-bc55-aea286699a31</p>
+<p>AccessKeyID</p>
+<p>SecretAccessKey</p>
+<p>Authentication Method   IAM</p>
+<p>URL Style               VHost</p>
+<p>Service Endpoint</p>
 </details>
-<ol start="15">
+<ol start="11">
 <li>List the <strong>storage class</strong> of the COS bucket.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ic cos bucket-class-get -bucket cos-l3-with-retention
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ic cos bucket-class-get -bucket cos-l3-with-retention
 </code></pre></div>
 <details class="example">
 <summary>Example output</summary>
-<p>OK
-Details about bucket cos-l3-bucket-1:
-Region: us-south
-Class: Smart</p>
+<p>OK</p>
+<p>Details about bucket cos-l3-bucket-1:</p>
+<p>Region: us-south</p>
+<p>Class: Smart</p>
 </details>
-<ol start="16">
+<ol start="12">
 <li>List the current content of a bucket.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ic cos objects --bucket cos-l3-with-retention
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ic cos objects --bucket cos-l3-with-retention
 </code></pre></div>
 <details class="example">
 <summary>Example output</summary>
-<p>OK
-Found 2 objects in bucket 'cos-l3-with-retention':</p>
-<p>Name                Last Modified              Object Size
-arj123-check2.jpg   Sep 19, 2022 at 17:28:14   101.41 KiB
-arj123-check3.jpg   Sep 19, 2022 at 20:07:32   83.08 KiB</p>
+<p>OK</p>
+<p>Found 2 objects in bucket 'cos-l3-with-retention':</p>
+<p>Name                Last Modified              Object Size</p>
+<p>arj123-check2.jpg   Sep 19, 2022 at 17:28:14   101.41 KiB</p>
+<p>arj123-check3.jpg   Sep 19, 2022 at 20:07:32   83.08 KiB</p>
 </details>
-<ol start="17">
+<ol start="13">
 <li>Upload a file to the COS bucket.</li>
 </ol>
 <p>The next command has 2 parameters that will need to be updated prior to executing them. The <strong>-key</strong> option specifies the filename for the object in COS.  The <strong>-body</strong> option specifies the local file to be uploaded.  A unique <strong>-key</strong> must be specified. In the command below, change <strong>arj123-check4.jpg</strong> to one of the files you downloaded earlier. Be sure to select a file that has not already been uploaded.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ic cos object-put —bucket cos-l3-with-retention —-key arj123-check4.jpg —-body arj123-check4.jpg
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ic cos object-put —bucket cos-l3-with-retention —-key arj123-check4.jpg —-body arj123-check4.jpg
 </code></pre></div>
 <details class="example">
 <summary>Example output</summary>
