@@ -10,15 +10,15 @@ The goal of this demonstration guide is to illustrate how to perform a demonstra
     - IBM LINK TO L2
     - Business Partner LINK TO L2
 
-**In this demonstration environment, full access to the IBM Cloud account is NOT provided.** IBM Cloud user identifications (IDs) will be restricted to specific capabilities. The IBM Technology Zone utilized in this demonstration guide is shared by all users. Permission to create or modify COS service instances, COS buckets, Key Protect instances, etc. is not provided! Additionally, expiration and retention periods are set in days rather than months are years which would be more typical in a real-life regulated archive solution. These restrictions are in place to minimize costs and to provide an easy-to-use, pre-built environment for this learning activity and that can be leveraged for general client demonstrations on very short notice.
+**In this demonstration environment, full access to the IBM Cloud account is NOT provided.** IBM Cloud user identifications (IDs) will be restricted to specific capabilities. The IBM Technology Zone utilized in this demonstration guide is shared by all users. Permission to create or modify COS service instances, COS buckets, Key Protect instances, etc. is not provided! Additionally, expiration and retention periods are set in days rather than months are years which would be more typical in a real-life regulated archive solution. These restrictions are in place to minimize costs, provide an easy-to-use, pre-built environment for this learning activity, and provide an environment for general client demonstrations on very short notice.
 
-Since the Technology Zone environment used in this demonstration guide is shared and pre-built, several activities are simulated through videos and click through (click-thru) demonstrations. These include Parts 2 through 6 and the Part 9. It is important to note that these activities are most likely ones that would be completed prior to a client demonstration to save time. Parts 7 and 8 are hands-on activities where users will perform tasks directly associated with the regulated archive demonstration including uploading data to COS and managing retention of the data including creating legal holds.
+Since the Technology Zone environment used in this demonstration guide is shared and pre-built, several activities are simulated through videos and click through (click-thru) demonstrations. These include Parts 2 through 6 and Part 9. It is important to note these activities are most likely ones that would be completed prior to a client demonstration to save time. Parts 7 and 8 are hands-on activities where users will perform tasks directly associated with the regulated archive demonstration including uploading data to COS and managing retention of the data including creating legal holds.
 
 The image below is a high level illustration of the regulated archive workflow and the components of the solution: COS, IBM Key Protect, and IBM Cloud Activity Tracker.
 
 ![](_attachments/COSL3-architecture.png)
 
-Using the above diagram, in this demonstration guide, **Step 1 - Classify data sets** is not performed. Rather it is assumed clients will best understand their data requirements and based upon those requirements and will specify the configurations set in **Step 2 - Create regulated data archive**.
+Using the above diagram, in this demonstration guide, **Step 1 - Classify data sets** is not performed. Rather it is assumed clients will best understand their data requirements and based upon those requirements will specify the configurations set in **Step 2 - Create regulated data archive**.
 
 **Step 2 - Create regulated data archive** aligns with Parts 1 thru 6 of the demonstration script. In these Parts, videos and click-thru demonstrations are provided that **show** how all the IBM Cloud components of this demonstration were created and configured. This includes:
 
@@ -39,8 +39,5 @@ Each of the above Parts include an introduction that will describe each componen
 - attempt to delete data from COS to validate retention policies and legal holds are honored
 
 Additionally, IBM Cloud Activity Tracker will be used to perform mock audit activities.
-
-- Part 7 - Create COS objects
-- Part 8 - Using COS Command Line Interfaces
 
 Time to get started. Proceed to Part 2 to watch and practice how a COS service is created.
