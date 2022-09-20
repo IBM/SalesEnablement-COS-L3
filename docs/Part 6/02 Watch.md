@@ -2,7 +2,7 @@ Watch the video below of a **COS bucket** being provisioned in the IBM Cloud Por
 
 This video includes audio that explains the steps being taken and things to consider while making choices on options. This video can be utilized for client demonstrations either with or without the audio.
 
-![type:video](./_videos/CreateCOSBucket-final.mp4)
+![type:video](./_videos/CreateBucket1-final.mp4)
 
 !!! tip
     If the video appears blurry, click the fullscreen ![](_attachments/FullScreenVideo.png) or ![](_attachment

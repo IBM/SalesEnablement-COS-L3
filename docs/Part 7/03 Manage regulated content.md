@@ -161,4 +161,6 @@ Because the expiration for the object was set with a three (3) day retention per
 - The object is deleted after the 3 day retention period by someone with appropriate permissions.
 - The object is automatically deleted after the 7 day expiry occurs that is set on the bucket.
 
+Notice there is a second bucket that has been provisioned with no retention policies: {{COS.bucket2}}. Feel free to use this bucket as part of client demonstrations.
+
 In the next chapter, explore how **legal holds** can be used to further protect regulated data.
