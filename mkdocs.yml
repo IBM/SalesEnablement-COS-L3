@@ -101,6 +101,7 @@ extra:
   COS:
     serviceInstanceName: "COS-L3-service"
     serviceInstanceID: "7ae313ac-9571-4bf6-bc55-aea286699a31"
+    serviceCRN: "43d07b21-b680-4d31-9d51-178f582d630c"
     serviceInstanceRG: "COS-L3"
     serviceInstanceLocation: "Dallas (us-south)"
     serviceInstanceRegion: "us-south"
