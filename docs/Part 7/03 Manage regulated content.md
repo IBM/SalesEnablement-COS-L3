@@ -161,6 +161,4 @@ Because the expiration for the object was set with a three (3) day retention per
 - The object is deleted after the 3 day retention period by someone with appropriate permissions.
 - The object is automatically deleted after the 7 day expiry occurs that is set on the bucket.
 
-Note, objects stored in a bucket that have a retention policy set are not automatically deleted after that retention policy is met. Objects must either be manually deleted or an expiration rule must be set as part of the bucket's lifecycle.
-
 In the next chapter, explore how **legal holds** can be used to further protect regulated data.

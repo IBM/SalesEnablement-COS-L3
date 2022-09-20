@@ -23,4 +23,4 @@ Note, fields that require a text entry (e.g. service name) are pre-populated in 
 
 Once the provisioning completes, the new Activity Tracker service instance can be found in the **Services and software** section of the IBM Cloud Portal dashboard. The Activity Tracker service instance is now ready for use.
 
-In the next part of the demonstration guide, learn how to create an **Bucket** to hold data in COS.
+In the next part of the demonstration guide, learn how to create a **Bucket** to hold data in COS.

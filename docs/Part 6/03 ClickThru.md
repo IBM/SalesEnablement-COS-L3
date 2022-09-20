@@ -39,4 +39,4 @@ Note, fields that require a text entry (e.g. service name) are pre-populated in 
 
 Once the provisioning completes, the new **Bucket** is ready to be used.
 
-In the next part of the demonstration guide, learn how to create upload and manage data in COS.
+In the next part of the demonstration guide, learn how to upload and manage data in COS.

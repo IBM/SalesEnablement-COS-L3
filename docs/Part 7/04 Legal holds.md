@@ -1,4 +1,4 @@
-Another means to protect regulated date is through the use of **Legal holds**. Certain objects might need to be prevented from modification after a retention period expires. An example is an incomplete legal review, where records might need to be accessible for an extended duration beyond the retention period originally set. A legal hold flag can then be applied at the object level.   Legal holds can be applied to objects during initial uploads or after an object is written.   Note: A maximum of 100 legal holds can be applied per object.
+Another means to protect regulated date is through the use of **Legal holds**. Certain objects might need to be prevented from modification after a retention period expires. An example is an incomplete legal review, where records might need to be accessible for an extended duration beyond the retention period originally set. A legal hold flag can be applied at the object level. Legal holds can be applied to objects during initial uploads or after an object is written. Note: A maximum of 100 legal holds can be applied per object.
 
 Follow the steps below to create a **legal hold** on an object. If not already open, open new browser tabs or windows to the IBM Cloud Portal COS bucket details and Activity Tracker as described in Steps 1 and 2 of the previous chapter.
 
@@ -36,7 +36,7 @@ Recall how in the last chapter how it was possible to delete an object that had 
 
 ![](_attachments/deleteObjectWithLegalHoldDialog.png)
 
-Notice the **Delete** failed. An error message should have appeared stating the **Delete** failed due
+Notice the **Delete** failed. An error message should have appeared stating the **Delete** failed due to an attached policy.
 
 ![](_attachments/deleteObjectWithLegalHoldFailure.png)
 

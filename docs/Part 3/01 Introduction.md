@@ -1,4 +1,4 @@
-The next step is to create a **Key Protect service** and a **Root Key**. In the Regulated Archive scenario, **Key Protect** and COS work together to help protect the regulated data while at rest. This added protection encrypts the data encryption keys (DEKs) associated with the COS. To completely understand the COS and Key Protect integration works, go <a href="https://cloud.ibm.com/docs/key-protect?topic=key-protect-integrate-cos#kp-cos-how" target="_blank">here</a>.
+The next step is to create a **Key Protect service** and a **Root Key**. In the Regulated Archive scenario, **Key Protect** and COS work together to help protect the regulated data while at rest. This added protection encrypts the data encryption keys (DEKs) associated with the COS. To completely understand how the COS and Key Protect integration works, go <a href="https://cloud.ibm.com/docs/key-protect?topic=key-protect-integrate-cos#kp-cos-how" target="_blank">here</a>.
 
 In this scenario, IBM Key Protect is used. In other client scenarios, IBM Hyper Protect Crypto Services may be required.
 
