@@ -1,5 +1,7 @@
 For this exercise, the IBM Cloud Shell will be used so no additional software is required. IBM Cloud Shell gives users complete control of their cloud resources, applications and infrastructure, from any web browser. IBM Cloud Shell provides pre-authenticated access to the latest tools and programming languages for cloud-based development, deployment and management of services and applications — all in a secure shell. IBM Cloud Shell is instantly accessible from the IBM Cloud portal.
 
+The directions below do not specify to check IBM Cloud Activity Tracker, but feel free to validate all actions that access data objects (i.e. downloading objects, uploading objects) is tracked by reviewing the Activity Tracker events.
+
 Follow the seps below to learn more about the COS command line interfaces.
 
 1. Change to the **ITZ - ADHOC03** account using the drop-down switcher, as shown in the GIF below.
@@ -61,7 +63,7 @@ ibmcloud cos config region --region "{{COS.serviceInstanceRegion}}"
 The -id flag returns just the CRN without additional information.
 
 ```
-ibmcloud resource service-instance {{COS.serviceInstanceID}} -id
+ibmcloud resource service-instance {{COS.serviceInstanceName}} -id
 ```
 
 ??? example "Example output"
@@ -74,7 +76,7 @@ ibmcloud resource service-instance {{COS.serviceInstanceID}} -id
 In this command, multiple commands are being executed. The command from the previous step is re-run and sent to the **cut** command to only return first part of the output. This is then added to the command to set the CRN for the COS configuration. The -q flag is added to suppress the headers from the first command.
 
 ```
-ibmcloud cos config crn -crn `ibmcloud resource service-instance ${{COS.serviceInstanceID}} -id -q | cut -f1 -d' ''`
+ibmcloud cos config crn -crn `ibmcloud resource service-instance ${{COS.serviceInstanceName}} -id -q | cut -f1 -d' ''`
 ```
 
 ??? example "Example output"
@@ -211,4 +213,4 @@ ls -l Downloads
     NEED output
 
 
-NEED A SUMMARY
+NEED A SUMMARY - if they haven't already, review the Activity Tracker events.  Was every tracked?
