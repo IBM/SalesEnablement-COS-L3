@@ -49,7 +49,7 @@ Next, in order to use the COS CLIs, a few configuration steps must be completed.
 8. Set the COS region to {{COS.serviceInstanceRegion}}.
 
 ```
-ic cos config region --region "{{COS.servibmcloudeInstanceRegion}}"
+ibmcloud cos config region --region "{{COS.serviceInstanceRegion}}"
 ```
 
 ??? example "Example output"
