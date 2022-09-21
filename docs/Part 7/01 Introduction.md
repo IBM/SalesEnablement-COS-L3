@@ -4,7 +4,7 @@ Now that all the provisioning and configuration of the environment is complete, 
 - specify object-specific retention durations
 - place legal holds on data
 - restore data
-- attempt to delete data from COS to validate retention policies and legal holds are honored
+- attempt to delete data from COS to validate retention policies and legal holds are honored and the data stored in COS is immutable (cannot be changed)
 
 And while performing the above steps, **Activity Tracker** will be leveraged to validate the audit readiness of the actions performed.
 
