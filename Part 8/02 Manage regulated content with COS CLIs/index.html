@@ -897,6 +897,7 @@
   <h1>Manage regulated content</h1>
 
 <p>For this exercise, the IBM Cloud Shell will be used so no additional software is required. IBM Cloud Shell gives users complete control of their cloud resources, applications and infrastructure, from any web browser. IBM Cloud Shell provides pre-authenticated access to the latest tools and programming languages for cloud-based development, deployment and management of services and applications — all in a secure shell. IBM Cloud Shell is instantly accessible from the IBM Cloud portal.</p>
+<p>The directions below do not specify to check IBM Cloud Activity Tracker, but feel free to validate all actions that access data objects (i.e. downloading objects, uploading objects) is tracked by reviewing the Activity Tracker events.</p>
 <p>Follow the seps below to learn more about the COS command line interfaces.</p>
 <ol>
 <li>Change to the <strong>ITZ - ADHOC03</strong> account using the drop-down switcher, as shown in the GIF below.</li>
@@ -953,7 +954,7 @@
 <li>Retrieve the Cloud Resource Name (CRN) for the COS service instance COS-L3-service.</li>
 </ol>
 <p>The -id flag returns just the CRN without additional information.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ibmcloud resource service-instance 7ae313ac-9571-4bf6-bc55-aea286699a31 -id
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ibmcloud resource service-instance COS-L3-service -id
 </code></pre></div>
 <details class="example">
 <summary>Example output</summary>
@@ -964,7 +965,7 @@
 <li>Set Cloud Resource Name (CRN) for the COS CLI configuration to the COS service instance CRN.</li>
 </ol>
 <p>In this command, multiple commands are being executed. The command from the previous step is re-run and sent to the <strong>cut</strong> command to only return first part of the output. This is then added to the command to set the CRN for the COS configuration. The -q flag is added to suppress the headers from the first command.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ibmcloud cos config crn -crn `ibmcloud resource service-instance $7ae313ac-9571-4bf6-bc55-aea286699a31 -id -q | cut -f1 -d&#39; &#39;&#39;`
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ibmcloud cos config crn -crn `ibmcloud resource service-instance $COS-L3-service -id -q | cut -f1 -d&#39; &#39;&#39;`
 </code></pre></div>
 <details class="example">
 <summary>Example output</summary>
@@ -1076,7 +1077,7 @@
 <summary>Example output</summary>
 <p>NEED output</p>
 </details>
-<p>NEED A SUMMARY</p>
+<p>NEED A SUMMARY - if they haven't already, review the Activity Tracker events.  Was every tracked?</p>
 
 
 

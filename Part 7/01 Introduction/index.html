@@ -902,7 +902,7 @@
 <li>specify object-specific retention durations</li>
 <li>place legal holds on data</li>
 <li>restore data</li>
-<li>attempt to delete data from COS to validate retention policies and legal holds are honored</li>
+<li>attempt to delete data from COS to validate retention policies and legal holds are honored and the data stored in COS is immutable (cannot be changed)</li>
 </ul>
 <p>And while performing the above steps, <strong>Activity Tracker</strong> will be leveraged to validate the audit readiness of the actions performed.</p>
 <p>Before getting started, a few important notes. As mentioned before, this is a shared environment. All users of the environment have the ability to upload, download, and delete all content added to the pre-provisioned buckets. Users should only work with objects they create. Do NOT upload any files that contain confidential or proprietary information. Note also, as a safeguard, all uploaded objects will be removed after 7 days using an expiry rule set on the COS bucket.</p>
