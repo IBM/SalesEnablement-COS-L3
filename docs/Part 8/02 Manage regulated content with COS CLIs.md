@@ -28,14 +28,13 @@ In this chapter, a similar scenario as seen in Part 7 will be used where files w
 wget https://raw.githubusercontent.com/IBM/SalesEnablement-COS-L3/main/docs/includes/downloadImageFiles.bash
 ```
 
-5. Execute the script to download the images files.
+5. Execute the script to download the images files, and when prompted, enter a unique prefix to use in the file names (e.g. arj123).
 
 ```
 bash ./downloadImageFiles.bash
 ```
 
-6. When prompted, enter a unique prefix to use in the file names (e.g. arj123).
-7. Verify the files now exist in the IBM Cloud Shell environment.
+6. Verify the files now exist in the IBM Cloud Shell environment.
 
 ```
 ls *.jpg
@@ -46,7 +45,7 @@ ls *.jpg
 
 Next, in order to use the COS CLIs, a few configuration steps must be completed.
 
-8. Set the COS region to {{COS.serviceInstanceRegion}}.
+7. Set the COS region to {{COS.serviceInstanceRegion}}.
 
 ```
 ibmcloud cos config region --region "{{COS.serviceInstanceRegion}}"
@@ -57,21 +56,25 @@ ibmcloud cos config region --region "{{COS.serviceInstanceRegion}}"
 
     Successfully saved default region. The program will look for buckets in the region us-south.
 
+8. Retrieve the Cloud Resource Name (CRN) for the COS service instance {{COS.serviceInstanceName}}.
 
-<!-- 10. Retrive the Cloud Resource Name (CRN) for the COS servibmcloude instance {{COS.serviceInstanceName}}.
+The -id flag returns just the CRN without additional information.
 
 ```
-ibmcloud resource service-instance {{COS.serviceInstanceID}}}} --id
+ibmcloud resource service-instance {{COS.serviceInstanceID}} -id
 ```
 
 ??? example "Example output"
-    Retrieving servibmcloude instance 7ae313ac-9571-4bf6-bc55-aea286699a31 in all resource groups under account ITZ - ADHOC03 as andrew@jones-tx.com...
-    crn:v1:bluemix:public:kms:us-south:a/934360f4a07b734c569d05a94f71816e:7ae313ac-9571-4bf6-bc55-aea286699a31:: 7ae313ac-9571-4bf6-bc55-aea286699a31 -->
+    Retrieving service instance COS-L3-service in all resource groups under account ITZ - ADHOC03 as andrewj@us.ibm.com...
 
-9. Set Cloud Resource Name (CRN) for the COS CLI configuration to the COS service instance ID **{{COS.serviceCRN}}.
+    crn:v1:bluemix:public:cloud-object-storage:global:a/ba0e33c9056f470ca19de009747ec654:43d07b21-b680-4d31-9d51-178f582d630c:: 43d07b21-b680-4d31-9d51-178f582d630c
+
+9. Set Cloud Resource Name (CRN) for the COS CLI configuration to the COS service instance CRN.
+
+In this command, multiple commands are being executed. The command from the previous step is re-run and sent to the **cut** command to only return first part of the output. This is then added to the command to set the CRN for the COS configuration. The -q flag is added to suppress the headers from the first command.
 
 ```
-ibmcloud cos config crn --crn ${{COS.serviceInstanceID}}
+ibmcloud cos config crn -crn `ibmcloud resource service-instance ${{COS.serviceInstanceID}} -id -q | cut -f1 -d' ''`
 ```
 
 ??? example "Example output"
@@ -81,7 +84,7 @@ ibmcloud cos config crn --crn ${{COS.serviceInstanceID}}
 
     Successfully stored your service instance ID.
 
-10. Verify CRN is set in COS CLI configuration.
+10. Verify CRN and region are set in COS CLI configuration.
 
 ```
 ibmcloud cos config list
@@ -96,7 +99,7 @@ ibmcloud cos config list
 
     Download Location       /home/andrew/Downloads
 
-    CRN                     7ae313ac-9571-4bf6-bc55-aea286699a31
+    CRN                     crn:v1:bluemix:public:cloud-object-storage:global:a/ba0e33c9056f470ca19de009747ec654:43d07b21-b680-4d31-9d51-178f582d630c::
 
     AccessKeyID
 
@@ -108,7 +111,32 @@ ibmcloud cos config list
 
     Service Endpoint
 
-11. List the **storage class** of the COS bucket.
+Notice in the output the **Download Location** is set to **/home/<your user ID>/Downloads**. Since this directory doesn't exist, it needs to be created before a object download can occur.
+
+11. Create a **Downloads** directory in the Cloud Shell environment.
+
+```
+mkdir downloadImageFiles
+```
+
+12. List all the **buckets** in the COS **service instance**.
+
+```
+ibmcloud cos buckets
+```
+
+??? example "Example output"
+    OK
+
+    2 buckets found in your account:
+
+    Name                       Date Created
+
+    cos-l3-with-retention      Sep 15, 2022 at 20:47:08
+
+    cos-l3-without-retention   Sep 15, 2022 at 22:10:01
+
+13. List the **storage class** of the COS bucket.
 
 ```
 ibmcloud cos bucket-class-get -bucket {{COS.bucket1}}
@@ -123,10 +151,10 @@ ibmcloud cos bucket-class-get -bucket {{COS.bucket1}}
 
     Class: Smart
 
-12. List the current content of a bucket.
+14. List the current content of a bucket.
 
 ```
-ibmcloud cos objects --bucket {{COS.bucket1}}
+ibmcloud cos objects -bucket {{COS.bucket1}}
 ```
 
 ??? example "Example output"
@@ -140,42 +168,47 @@ ibmcloud cos objects --bucket {{COS.bucket1}}
 
     arj123-check3.jpg   Sep 19, 2022 at 20:07:32   83.08 KiB
 
-13. Upload a file to the COS bucket.
+15. Upload a file to the COS bucket.
 
-The next command has 2 parameters that will need to be updated prior to executing them. The **-key** option specifies the filename for the object in COS.  The **-body** option specifies the local file to be uploaded.  A unique **-key** must be specified. In the command below, change **arj123-check4.jpg** to one of the files you downloaded earlier. Be sure to select a file that has not already been uploaded.
+The next command has 2 parameters that will need to be modified prior to executing them. The **-key** option specifies the filename for the object in COS.  The **-body** option specifies the local file to be uploaded. A unique **-key** must be specified. In the commands below, change **arj123-check4.jpg** to one of the files you downloaded earlier. Be sure to select a file that has not already been uploaded.
 
-```
-ibmcloud cos object-put —bucket {{COS.bucket1}} —-key arj123-check4.jpg —-body arj123-check4.jpg
-```
+```ibmcloud cos object-put -bucket {{COS.bucket1}} —key arj123-check4.jpg -body arj123-check4.jpg```
+
+The above command does not specify a retention period for the object. When this happens, the **default** value (recall this was set to 1 day for this bucket) is used. In order to specify a different value via the command line, the object content and key must be provided using Java Object Notation (JSON). Refer to the COS <a href="https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-cli-plugin-ic-cos-cli&mhsrc=ibmsearch_a&mhq=cloud+object+storage+cli#ic-upload-s3manager" target="_blank">here> for more details.
 
 ??? example "Example output"
 
 
+16. Try uploading the same file again.
+
+```ibmcloud cos object-put —bucket {{COS.bucket1}} —key arj123-check4.jpg —body arj123-check4.jpg```
+
+??? example "Example output"
+
+Why did this fail?
+
+??? question "Answer"
+    Because the bucket has a retention policy, objects cannot be updated, thus protecting the objects **immutability**.
+
+17. Try to download the object.
+
+```ibmcloud cos object-put -bucket {{COS.bucket1}} -key arj123-check4.jpg -body arj123-check4.jpg```
+
+??? example "Example output"
+    NEED output
+
+18. Verify the file was downloaded.
+
+```
+ls -l Downloads
+```
+
+19. Try to delete the object.
+
+```ibmcloud cos object-delete -bucket {{COS.bucket1}} -key arj123-check4.jpg```
+
+??? example "Example output"
+    NEED output
 
 
-
-# when trying to delete with Write access get:
-
-andrew@cloudshell:~$ ibmcloud cos object-delete --bucket cos-l3-bucket-1 --key "slack.gif"
-WARNING: This will permanently delete the object 'slack.gif' from the bucket 'cos-l3-bucket-1'.
-Are you sure you would like to continue? [y/N]> y
-FAILED
-InvalidRequestForLegalReasons: The object is protected
-        status code: 451, request id: db244dda-1eb8-4512-b397-21efdf3519a7, host id:
-
-
-# in Activity Tracker it says “InvalidRequestForLegalReasons”
-
-
-
-
-
-
-
-# upload a file
-echo “hello world” > arj.txt
-ls -l arj.txt
-
-ibmcloud cos object-put —bucket cos-l3-bucket-1 —key arj.txt —body arj.txt
-
-# above uses default retention period
+NEED A SUMMARY
