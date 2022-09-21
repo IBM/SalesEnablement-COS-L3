@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#when-trying-to-delete-with-write-access-get" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -790,8 +785,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Manage regulated content
@@ -888,8 +881,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -902,6 +893,8 @@
               
                 
 
+
+  <h1>Manage regulated content</h1>
 
 <p>For this exercise, the IBM Cloud Shell will be used so no additional software is required. IBM Cloud Shell gives users complete control of their cloud resources, applications and infrastructure, from any web browser. IBM Cloud Shell provides pre-authenticated access to the latest tools and programming languages for cloud-based development, deployment and management of services and applications — all in a secure shell. IBM Cloud Shell is instantly accessible from the IBM Cloud portal.</p>
 <p>Follow the seps below to learn more about the COS command line interfaces.</p>
@@ -932,12 +925,11 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wget https://raw.githubusercontent.com/IBM/SalesEnablement-COS-L3/main/docs/includes/downloadImageFiles.bash
 </code></pre></div>
 <ol start="5">
-<li>Execute the script to download the images files.</li>
+<li>Execute the script to download the images files, and when prompted, enter a unique prefix to use in the file names (e.g. arj123).</li>
 </ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bash ./downloadImageFiles.bash
 </code></pre></div>
 <ol start="6">
-<li>When prompted, enter a unique prefix to use in the file names (e.g. arj123).</li>
 <li>Verify the files now exist in the IBM Cloud Shell environment.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ls *.jpg
@@ -947,7 +939,7 @@
 <p>arj123-check1.jpg  arj123-check2.jpg  arj123-check3.jpg  arj123-check4.jpg  arj123-check5.jpg  arj123-check6.jpg</p>
 </details>
 <p>Next, in order to use the COS CLIs, a few configuration steps must be completed.</p>
-<ol start="8">
+<ol start="7">
 <li>Set the COS region to us-south.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ibmcloud cos config region --region &quot;us-south&quot;
@@ -957,19 +949,22 @@
 <p>OK</p>
 <p>Successfully saved default region. The program will look for buckets in the region us-south.</p>
 </details>
-<!-- 10. Retrive the Cloud Resource Name (CRN) for the COS servibmcloude instance COS-L3-service.
-
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ibmcloud resource service-instance 7ae313ac-9571-4bf6-bc55-aea286699a31}} --id
-</code></pre></div>
-
-??? example "Example output"
-    Retrieving servibmcloude instance 7ae313ac-9571-4bf6-bc55-aea286699a31 in all resource groups under account ITZ - ADHOC03 as andrew@jones-tx.com...
-    crn:v1:bluemix:public:kms:us-south:a/934360f4a07b734c569d05a94f71816e:7ae313ac-9571-4bf6-bc55-aea286699a31:: 7ae313ac-9571-4bf6-bc55-aea286699a31 -->
-
-<ol start="9">
-<li>Set Cloud Resource Name (CRN) for the COS CLI configuration to the COS service instance ID **43d07b21-b680-4d31-9d51-178f582d630c.</li>
+<ol start="8">
+<li>Retrieve the Cloud Resource Name (CRN) for the COS service instance COS-L3-service.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ibmcloud cos config crn --crn $7ae313ac-9571-4bf6-bc55-aea286699a31
+<p>The -id flag returns just the CRN without additional information.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ibmcloud resource service-instance 7ae313ac-9571-4bf6-bc55-aea286699a31 -id
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>Retrieving service instance COS-L3-service in all resource groups under account ITZ - ADHOC03 as andrewj@us.ibm.com...</p>
+<p>crn:v1:bluemix:public:cloud-object-storage:global:a/ba0e33c9056f470ca19de009747ec654:43d07b21-b680-4d31-9d51-178f582d630c:: 43d07b21-b680-4d31-9d51-178f582d630c</p>
+</details>
+<ol start="9">
+<li>Set Cloud Resource Name (CRN) for the COS CLI configuration to the COS service instance CRN.</li>
+</ol>
+<p>In this command, multiple commands are being executed. The command from the previous step is re-run and sent to the <strong>cut</strong> command to only return first part of the output. This is then added to the command to set the CRN for the COS configuration. The -q flag is added to suppress the headers from the first command.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ibmcloud cos config crn -crn `ibmcloud resource service-instance $7ae313ac-9571-4bf6-bc55-aea286699a31 -id -q | cut -f1 -d&#39; &#39;&#39;`
 </code></pre></div>
 <details class="example">
 <summary>Example output</summary>
@@ -978,7 +973,7 @@
 <p>Successfully stored your service instance ID.</p>
 </details>
 <ol start="10">
-<li>Verify CRN is set in COS CLI configuration.</li>
+<li>Verify CRN and region are set in COS CLI configuration.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ibmcloud cos config list
 </code></pre></div>
@@ -988,17 +983,36 @@
 <p>Last Updated            Monday, September 19 2022 at 21:24:46</p>
 <p>Default Region          us-south</p>
 <p>Download Location       /home/andrew/Downloads</p>
-<p>CRN                     7ae313ac-9571-4bf6-bc55-aea286699a31</p>
+<p>CRN                     crn:v1:bluemix:public:cloud-object-storage:global:a/ba0e33c9056f470ca19de009747ec654:43d07b21-b680-4d31-9d51-178f582d630c::</p>
 <p>AccessKeyID</p>
 <p>SecretAccessKey</p>
 <p>Authentication Method   IAM</p>
 <p>URL Style               VHost</p>
 <p>Service Endpoint</p>
 </details>
+<p>Notice in the output the <strong>Download Location</strong> is set to <strong>/home/<your user ID>/Downloads</strong>. Since this directory doesn't exist, it needs to be created before a object download can occur.</p>
 <ol start="11">
+<li>Create a <strong>Downloads</strong> directory in the Cloud Shell environment.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mkdir downloadImageFiles
+</code></pre></div>
+<ol start="12">
+<li>List all the <strong>buckets</strong> in the COS <strong>service instance</strong>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ibmcloud cos buckets
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>OK</p>
+<p>2 buckets found in your account:</p>
+<p>Name                       Date Created</p>
+<p>cos-l3-with-retention      Sep 15, 2022 at 20:47:08</p>
+<p>cos-l3-without-retention   Sep 15, 2022 at 22:10:01</p>
+</details>
+<ol start="13">
 <li>List the <strong>storage class</strong> of the COS bucket.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ibmcloud cos bucket-class-get -bucket cos-l3-with-retention
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ibmcloud cos bucket-class-get -bucket cos-l3-with-retention
 </code></pre></div>
 <details class="example">
 <summary>Example output</summary>
@@ -1007,10 +1021,10 @@
 <p>Region: us-south</p>
 <p>Class: Smart</p>
 </details>
-<ol start="12">
+<ol start="14">
 <li>List the current content of a bucket.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ibmcloud cos objects --bucket cos-l3-with-retention
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ibmcloud cos objects -bucket cos-l3-with-retention
 </code></pre></div>
 <details class="example">
 <summary>Example output</summary>
@@ -1020,28 +1034,49 @@
 <p>arj123-check2.jpg   Sep 19, 2022 at 17:28:14   101.41 KiB</p>
 <p>arj123-check3.jpg   Sep 19, 2022 at 20:07:32   83.08 KiB</p>
 </details>
-<ol start="13">
+<ol start="15">
 <li>Upload a file to the COS bucket.</li>
 </ol>
-<p>The next command has 2 parameters that will need to be updated prior to executing them. The <strong>-key</strong> option specifies the filename for the object in COS.  The <strong>-body</strong> option specifies the local file to be uploaded.  A unique <strong>-key</strong> must be specified. In the command below, change <strong>arj123-check4.jpg</strong> to one of the files you downloaded earlier. Be sure to select a file that has not already been uploaded.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ibmcloud cos object-put —bucket cos-l3-with-retention —-key arj123-check4.jpg —-body arj123-check4.jpg
-</code></pre></div>
+<p>The next command has 2 parameters that will need to be modified prior to executing them. The <strong>-key</strong> option specifies the filename for the object in COS.  The <strong>-body</strong> option specifies the local file to be uploaded. A unique <strong>-key</strong> must be specified. In the commands below, change <strong>arj123-check4.jpg</strong> to one of the files you downloaded earlier. Be sure to select a file that has not already been uploaded.</p>
+<p><code>ibmcloud cos object-put -bucket cos-l3-with-retention —key arj123-check4.jpg -body arj123-check4.jpg</code></p>
+<p>The above command does not specify a retention period for the object. When this happens, the <strong>default</strong> value (recall this was set to 1 day for this bucket) is used. In order to specify a different value via the command line, the object content and key must be provided using Java Object Notation (JSON). Refer to the COS <a href="https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-cli-plugin-ic-cos-cli&mhsrc=ibmsearch_a&mhq=cloud+object+storage+cli#ic-upload-s3manager" target="_blank">here&gt; for more details.</p>
 <details class="example">
 <summary>Example output</summary>
 </details>
-<h1 id="when-trying-to-delete-with-write-access-get">when trying to delete with Write access get:</h1>
-<p>andrew@cloudshell:~$ ibmcloud cos object-delete --bucket cos-l3-bucket-1 --key "slack.gif"
-WARNING: This will permanently delete the object 'slack.gif' from the bucket 'cos-l3-bucket-1'.
-Are you sure you would like to continue? [y/N]&gt; y
-FAILED
-InvalidRequestForLegalReasons: The object is protected
-        status code: 451, request id: db244dda-1eb8-4512-b397-21efdf3519a7, host id:</p>
-<h1 id="in-activity-tracker-it-says-invalidrequestforlegalreasons">in Activity Tracker it says “InvalidRequestForLegalReasons”</h1>
-<h1 id="upload-a-file">upload a file</h1>
-<p>echo “hello world” &gt; arj.txt
-ls -l arj.txt</p>
-<p>ibmcloud cos object-put —bucket cos-l3-bucket-1 —key arj.txt —body arj.txt</p>
-<h1 id="above-uses-default-retention-period">above uses default retention period</h1>
+<ol start="16">
+<li>Try uploading the same file again.</li>
+</ol>
+<p><code>ibmcloud cos object-put —bucket cos-l3-with-retention —key arj123-check4.jpg —body arj123-check4.jpg</code></p>
+<details class="example">
+<summary>Example output</summary>
+</details>
+<p>Why did this fail?</p>
+<details class="question">
+<summary>Answer</summary>
+<p>Because the bucket has a retention policy, objects cannot be updated, thus protecting the objects <strong>immutability</strong>.</p>
+</details>
+<ol start="17">
+<li>Try to download the object.</li>
+</ol>
+<p><code>ibmcloud cos object-put -bucket cos-l3-with-retention -key arj123-check4.jpg -body arj123-check4.jpg</code></p>
+<details class="example">
+<summary>Example output</summary>
+<p>NEED output</p>
+</details>
+<ol start="18">
+<li>Verify the file was downloaded.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ls -l Downloads
+</code></pre></div>
+<ol start="19">
+<li>Try to delete the object.</li>
+</ol>
+<p><code>ibmcloud cos object-delete -bucket cos-l3-with-retention -key arj123-check4.jpg</code></p>
+<details class="example">
+<summary>Example output</summary>
+<p>NEED output</p>
+</details>
+<p>NEED A SUMMARY</p>
 
 
 
