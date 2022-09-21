@@ -965,7 +965,7 @@
 <li>Set Cloud Resource Name (CRN) for the COS CLI configuration to the COS service instance CRN.</li>
 </ol>
 <p>In this command, multiple commands are being executed. The command from the previous step is re-run and sent to the <strong>cut</strong> command to only return first part of the output. This is then added to the command to set the CRN for the COS configuration. The -q flag is added to suppress the headers from the first command.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ibmcloud cos config crn -crn `ibmcloud resource service-instance $COS-L3-service -id -q | cut -f1 -d&#39; &#39;&#39;`
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ibmcloud cos config crn -crn `ibmcloud resource service-instance COS-L3-service -id -q | cut -f1 -d&#39; &#39;`
 </code></pre></div>
 <details class="example">
 <summary>Example output</summary>
@@ -995,7 +995,7 @@
 <ol start="11">
 <li>Create a <strong>Downloads</strong> directory in the Cloud Shell environment.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mkdir downloadImageFiles
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mkdir Downloads
 </code></pre></div>
 <ol start="12">
 <li>List all the <strong>buckets</strong> in the COS <strong>service instance</strong>.</li>
@@ -1039,7 +1039,7 @@
 <li>Upload a file to the COS bucket.</li>
 </ol>
 <p>The next command has 2 parameters that will need to be modified prior to executing them. The <strong>-key</strong> option specifies the filename for the object in COS.  The <strong>-body</strong> option specifies the local file to be uploaded. A unique <strong>-key</strong> must be specified. In the commands below, change <strong>arj123-check4.jpg</strong> to one of the files you downloaded earlier. Be sure to select a file that has not already been uploaded.</p>
-<p><code>ibmcloud cos object-put -bucket cos-l3-with-retention —key arj123-check4.jpg -body arj123-check4.jpg</code></p>
+<p><code>ibmcloud cos object-put -bucket cos-l3-with-retention -key arj123-check4.jpg -body arj123-check4.jpg</code></p>
 <p>The above command does not specify a retention period for the object. When this happens, the <strong>default</strong> value (recall this was set to 1 day for this bucket) is used. In order to specify a different value via the command line, the object content and key must be provided using Java Object Notation (JSON). Refer to the COS <a href="https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-cli-plugin-ic-cos-cli&mhsrc=ibmsearch_a&mhq=cloud+object+storage+cli#ic-upload-s3manager" target="_blank">here</a> for more details.</p>
 <details class="example">
 <summary>Example output</summary>
@@ -1050,6 +1050,9 @@
 <p><code>ibmcloud cos object-put —bucket cos-l3-with-retention —key arj123-check4.jpg —body arj123-check4.jpg</code></p>
 <details class="example">
 <summary>Example output</summary>
+<p>FAILED</p>
+<p>InvalidRequestForLegalReasons: The object is protected
+    status code: 451, request id: b1a03a5d-6885-4114-957a-9dfdd8c57f8c, host id:</p>
 </details>
 <p>Why did this fail?</p>
 <details class="question">
@@ -1059,23 +1062,35 @@
 <ol start="17">
 <li>Try to download the object.</li>
 </ol>
-<p><code>ibmcloud cos object-put -bucket cos-l3-with-retention -key arj123-check4.jpg -body arj123-check4.jpg</code></p>
+<p><code>ibmcloud cos object-get -bucket cos-l3-with-retention -key arj123-check4.jpg</code></p>
 <details class="example">
 <summary>Example output</summary>
-<p>NEED output</p>
+<p>OK</p>
+<p>Successfully downloaded 'arj123-check4.jpg' from bucket 'cos-l3-with-retention'
+137.57 KiB downloaded.</p>
 </details>
 <ol start="18">
 <li>Verify the file was downloaded.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ls -l Downloads
 </code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>total 140</p>
+<p>-rw-rw-r-- 1 andrewj user 140868 Sep 21 23:06 xyz123-check4.jpg</p>
+</details>
 <ol start="19">
 <li>Try to delete the object.</li>
 </ol>
 <p><code>ibmcloud cos object-delete -bucket cos-l3-with-retention -key arj123-check4.jpg</code></p>
 <details class="example">
 <summary>Example output</summary>
-<p>NEED output</p>
+<p>WARNING: This will permanently delete the object 'xyz123-check4.jpg' from the bucket 'cos-l3-with-retention'.</p>
+<p>Are you sure you would like to continue? [y/N]&gt; y</p>
+<p>FAILED</p>
+<p>InvalidRequestForLegalReasons: The object is protected</p>
+<div class="highlight"><pre><span></span><code>status code: 451, request id: accdd106-db7c-4f5e-8c6d-69f6811382f2, host id:
+</code></pre></div>
 </details>
 <p>NEED A SUMMARY - if they haven't already, review the Activity Tracker events.  Was every tracked?</p>
 
