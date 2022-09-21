@@ -76,7 +76,7 @@ ibmcloud resource service-instance {{COS.serviceInstanceName}} -id
 In this command, multiple commands are being executed. The command from the previous step is re-run and sent to the **cut** command to only return first part of the output. This is then added to the command to set the CRN for the COS configuration. The -q flag is added to suppress the headers from the first command.
 
 ```
-ibmcloud cos config crn -crn `ibmcloud resource service-instance ${{COS.serviceInstanceName}} -id -q | cut -f1 -d' ''`
+ibmcloud cos config crn -crn `ibmcloud resource service-instance {{COS.serviceInstanceName}} -id -q | cut -f1 -d' '`
 ```
 
 ??? example "Example output"
@@ -118,7 +118,7 @@ Notice in the output the **Download Location** is set to **/home/<your user ID>/
 11. Create a **Downloads** directory in the Cloud Shell environment.
 
 ```
-mkdir downloadImageFiles
+mkdir Downloads
 ```
 
 12. List all the **buckets** in the COS **service instance**.
@@ -174,7 +174,7 @@ ibmcloud cos objects -bucket {{COS.bucket1}}
 
 The next command has 2 parameters that will need to be modified prior to executing them. The **-key** option specifies the filename for the object in COS.  The **-body** option specifies the local file to be uploaded. A unique **-key** must be specified. In the commands below, change **arj123-check4.jpg** to one of the files you downloaded earlier. Be sure to select a file that has not already been uploaded.
 
-```ibmcloud cos object-put -bucket {{COS.bucket1}} —key arj123-check4.jpg -body arj123-check4.jpg```
+```ibmcloud cos object-put -bucket {{COS.bucket1}} -key arj123-check4.jpg -body arj123-check4.jpg```
 
 The above command does not specify a retention period for the object. When this happens, the **default** value (recall this was set to 1 day for this bucket) is used. In order to specify a different value via the command line, the object content and key must be provided using Java Object Notation (JSON). Refer to the COS <a href="https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-cli-plugin-ic-cos-cli&mhsrc=ibmsearch_a&mhq=cloud+object+storage+cli#ic-upload-s3manager" target="_blank">here</a> for more details.
 
@@ -186,6 +186,10 @@ The above command does not specify a retention period for the object. When this 
 ```ibmcloud cos object-put —bucket {{COS.bucket1}} —key arj123-check4.jpg —body arj123-check4.jpg```
 
 ??? example "Example output"
+    FAILED
+
+    InvalidRequestForLegalReasons: The object is protected
+        status code: 451, request id: b1a03a5d-6885-4114-957a-9dfdd8c57f8c, host id:
 
 Why did this fail?
 
@@ -194,10 +198,13 @@ Why did this fail?
 
 17. Try to download the object.
 
-```ibmcloud cos object-put -bucket {{COS.bucket1}} -key arj123-check4.jpg -body arj123-check4.jpg```
+```ibmcloud cos object-get -bucket {{COS.bucket1}} -key arj123-check4.jpg```
 
 ??? example "Example output"
-    NEED output
+    OK
+
+    Successfully downloaded 'arj123-check4.jpg' from bucket 'cos-l3-with-retention'
+    137.57 KiB downloaded.
 
 18. Verify the file was downloaded.
 
@@ -205,12 +212,25 @@ Why did this fail?
 ls -l Downloads
 ```
 
+??? example "Example output"
+    total 140
+
+    -rw-rw-r-- 1 andrewj user 140868 Sep 21 23:06 xyz123-check4.jpg
+
 19. Try to delete the object.
 
 ```ibmcloud cos object-delete -bucket {{COS.bucket1}} -key arj123-check4.jpg```
 
 ??? example "Example output"
-    NEED output
+    WARNING: This will permanently delete the object 'xyz123-check4.jpg' from the bucket 'cos-l3-with-retention'.
+
+    Are you sure you would like to continue? [y/N]> y
+
+    FAILED
+
+    InvalidRequestForLegalReasons: The object is protected
+
+        status code: 451, request id: accdd106-db7c-4f5e-8c6d-69f6811382f2, host id:
 
 
 NEED A SUMMARY - if they haven't already, review the Activity Tracker events.  Was every tracked?
