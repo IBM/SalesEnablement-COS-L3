@@ -24,7 +24,7 @@ Follow the steps below to create a **legal hold** on an object. If not already o
 
 ![](_attachments/AddLegalHold.png)
 
-A Transfers dialog will open and after the file uploads, a success message will appear.  Close these windows by clicking the **X** at top right of each.
+A Transfers dialog will open and after the file uploads, a success message will appear. Close these windows by clicking the **X** at top right of each.
 
 Recall how in the last chapter how it was possible to delete an object that had a retention period of 0 days. Now, try and delete the document just upload that has a retention of 0 days AND a **legal hold**.
 

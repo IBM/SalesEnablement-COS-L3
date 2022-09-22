@@ -1,4 +1,4 @@
-Next, follow  the steps below to verify the retention policies created for the bucket.
+Next, follow the steps below to verify the retention policies created for the bucket.
 
 To complete the next steps, users will be utilizing three (3) browser windows:
 
@@ -62,13 +62,13 @@ At this time, there may or may not be events displayed in the **Activity Tracker
 
 ![](_attachments/ObjectUploadRetention.png)
 
-A couple of items to note.  The default **Duration** is set to 1 day.  Recall this from the **bucket** settings.  Also note, the **eligible for deletion** date which should align with the maximum retention value of the **bucket**.
+A couple of items to note. The default **Duration** is set to 1 day. Recall this from the **bucket** settings. Also note, the **eligible for deletion** date which should align with the maximum retention value of the **bucket**.
 
 12. Change the **Duration** field from **1** to **0** days and click **Upload**.
 
 ![](_attachments/ObjectUploadObject.png)
 
-A **Transfers** dialog will appear and a **Success**  message should also be displayed.  Clear these by clicking the **x** for each dialog. Additionally, now in the bucket details table, the newly upload object should be listed. Note, use the table search or use the **Object name** sort option in the table to find the uploaded object.
+A **Transfers** dialog will appear and a **Success** message should also be displayed. Clear these by clicking the **x** for each dialog. Additionally, now in the bucket details table, the newly upload object should be listed. Note, use the table search or use the **Object name** sort option in the table to find the uploaded object.
 
 13. Switch to the **Activity Tracker** Dashboard.
 
@@ -76,7 +76,7 @@ A **Transfers** dialog will appear and a **Success**  message should also be dis
 
 ![](_attachments/ATObjectCreate.png)
 
-Note, the **create object** event should be towards the bottom of the listing. Once located, click just to the left of the line in the table.  This will expand the entry.
+Note, the **create object** event should be towards the bottom of the listing. Once located, click just to the left of the line in the table. This will expand the entry.
 
 ![](_attachments/ATObjectCreateDetails.png)
 
@@ -96,7 +96,7 @@ Notice the two new options available: **Download objects** and **Delete objects*
 
 ![](_attachments/DownloadDialog.png)
 
-The **Transfers** dialog shows the download progress and success.  Dismiss the **Transfers** dialog by clicking the **X** at top right.
+The **Transfers** dialog shows the download progress and success. Dismiss the **Transfers** dialog by clicking the **X** at top right.
 
 16. Select the filename again, and click **Delete objects**.
 
@@ -116,7 +116,7 @@ Since the object was uploaded with a **0 Day** retention, it can be deleted.
 
 ![](_attachments/ATObjectDelete.png)
 
-Once located, click just to the left of each line in the table.  This will expand the entry.
+Once located, click just to the left of each line in the table. This will expand the entry.
 
 ![](_attachments/ATObjectDeleteDetails.png)
 

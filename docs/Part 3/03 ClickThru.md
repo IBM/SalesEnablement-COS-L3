@@ -29,7 +29,7 @@ Next, a Root Key needs to be created in the Key Protect service.
 
 Notice **Root key** is already selected under **key type**.
 
-15. Click in the **Key name** text entry  field.
+15. Click in the **Key name** text entry field.
 16. Click the **Select a key ring** pull-down menu.
 17. Click the **default** option in the key ring pull-down menu.
 18. Click **Add key**.

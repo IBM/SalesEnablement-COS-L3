@@ -28,6 +28,6 @@ For this demonstration script, users should create 4 to 6 small files that will 
 <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/checkImages/check6.jpg" target="_blank">check6.jpg</a>
 
 !!! important
-    When saving the file, add a unique prefix to the file name. For example, save check1.jpg as arj123_check1.jpg.  Using a unique prefix will avoid file name conflicts with others using this shared environment.
+    When saving the file, add a unique prefix to the file name. For example, save check1.jpg as arj123_check1.jpg. Using a unique prefix will avoid file name conflicts with others using this shared environment.
 
 ![](_attachments/checkDownloadListing.png)
