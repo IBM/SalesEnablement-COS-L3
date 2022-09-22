@@ -113,7 +113,7 @@ ibmcloud cos config list
 
     Service Endpoint
 
-Notice in the output the **Download Location** is set to **/home/<your user ID>/Downloads**. Since this directory doesn't exist, it needs to be created before a object download can occur.
+Notice in the output the **Download Location** is set to **/home/<user ID>/Downloads**. Since this directory doesn't exist, it needs to be created before an object download can occur.
 
 11. Create a **Downloads** directory in the Cloud Shell environment.
 
@@ -174,7 +174,7 @@ Note, when executing the above command, the output will be similar to the exampl
 
 15. Upload a file to the COS bucket.
 
-The next command has 2 parameters that will need to be modified prior to executing them. The **-key** option specifies the filename for the object in COS. The **-body** option specifies the local file to be uploaded. A unique **-key** must be specified. In the commands below, change **arj123-check4.jpg** to one of the files you downloaded earlier. Be sure to select a file that has not already been uploaded.
+The next command has 2 parameters that will need to be modified prior to executing them. The **-key** option specifies the filename for the object in COS. The **-body** option specifies the local file to be uploaded. A unique **-key** must be specified. In the commands below, change **arj123-check4.jpg** to one of the files downloaded earlier. Be sure to select a file that has not already been uploaded.
 
 !!! important
     The command below must be modified to use the unique filename prefix specified earlier. The **copy to clipboard** button has been disabled as it automatically appends an enter key when pasted. Highlight the text and do a ++ctrl++**+c**, ++cmd++**+c**, or right click and select copy. Then paste and modify the command in IBM Cloud Shell.
