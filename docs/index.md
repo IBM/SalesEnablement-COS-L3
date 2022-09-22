@@ -82,6 +82,7 @@ The following acronyms are used throughout this demonstration guide:
     - High Availability (HA)
     - IBM Cloud Object Storage (COS)
     - IBM Technology Zone (TechZone)
+    - Identity and Access Management (IAM)
     - Infrastructure as a Service (IaaS)
     - Input/output operations per second (IOPs)
     - Internet Protocol (IP)
