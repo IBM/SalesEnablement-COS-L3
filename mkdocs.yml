@@ -92,7 +92,7 @@ extra:
   offering:
     name: "IBM Cloud Object Storage"
   guide:
-    name: "IBM Cloud Object Storage- Level 3 Demonstration Guide"
+    name: "IBM Cloud Object Storage - Level 3 Demonstration Guide"
     url: "https://ibm.github.io/SalesEnablement-COS-L3/"
   tz_environment:
     name: "IBM Cloud Object Storage - Sales Enablment L3"
