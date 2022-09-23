@@ -58,6 +58,9 @@ ibmcloud cos config region --region "{{COS.serviceInstanceRegion}}"
 
     Successfully saved default region. The program will look for buckets in the region us-south.
 
+??? failure "If the command above failed..."
+    Occasionally, when creating the IBM Cloud Shell, the account may not be properly set for the shell instance.  Verify the **Current account** shown in top right corner of the window is set to {{account}}. If it is not properly set, close the current IBM Cloud Shell browser tab, Repeat Step 1, wait a few seconds, and then continue with next steps if the **Current account** is set to {{account}}.      
+
 8. Retrieve the Cloud Resource Name (CRN) for the COS service instance {{COS.serviceInstanceName}}.
 
 The -id flag returns just the CRN without additional information.
