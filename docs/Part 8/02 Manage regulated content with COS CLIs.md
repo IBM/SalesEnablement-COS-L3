@@ -19,7 +19,7 @@ The next steps are performed in using the IBM Cloud Shell window that was just o
 
 3. In the top-right corner of the IBM Cloud Shell window is a square icon with an "up" arrow. Click this button to upload a file — upload the SSH key downloaded earlier.
 
-In this chapter, a similar scenario as seen in Part 7 will be used where files will be uploaded, retention periods set, and attempts to delete the objects will be made. To facilite the scenario, a script is provided that will automatically download the 6 image files to the IBM Cloud Shell environment.
+In this chapter, a similar scenario as seen in Part 7 will be used where files will be uploaded, retention periods set, and attempts to delete the objects will be made. To facilitate the scenario, a script is provided that will automatically download the 6 image files to the IBM Cloud Shell environment.
 
 !!! important
     Be sure to utilize the demonstration guides **copy** ![](_attachments/Usage-Clipboard.png) icon to avoid typographical errors in executing commands.
@@ -59,7 +59,7 @@ ibmcloud cos config region --region "{{COS.serviceInstanceRegion}}"
     Successfully saved default region. The program will look for buckets in the region us-south.
 
 ??? failure "If the command above failed..."
-    Occasionally, when creating the IBM Cloud Shell, the account may not be properly set for the shell instance.  Verify the **Current account** shown in top right corner of the window is set to {{account}}. If it is not properly set, close the current IBM Cloud Shell browser tab, repeat Step 1, wait a few seconds, and then continue with next steps if the **Current account** is set to {{account}}.      
+    Occasionally, when creating the IBM Cloud Shell, the account may not be properly set for the shell instance.  Verify the **Current account** shown in top right corner of the window is set to {{account}}. If it is not properly set, close the current IBM Cloud Shell browser tab, repeat Step 1, wait a few seconds, and then continue with next steps if the **Current account** is set to {{account}}.
 
 8. Retrieve the Cloud Resource Name (CRN) for the COS service instance {{COS.serviceInstanceName}}.
 
