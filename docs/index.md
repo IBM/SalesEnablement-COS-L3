@@ -1,4 +1,4 @@
-Welcome to the {{learningplan.name}} demonstration guide! The goal of this demonstration guide is to provide IBM and Business Partner Sales and Technical Sales with the knowledge and tools to perform hands-on demonstrations of {{offering.name}}. Throughout this demonstration guide {{offering.name}} will be referred to as COS.
+Welcome to the {{learningplan.name}} demonstration guide! The goal of this demonstration guide is to provide sellers and technical sellers from IBM and Business Partners with the knowledge and tools to perform hands-on demonstrations of {{offering.name}}. Throughout this demonstration guide {{offering.name}} will be referred to as COS.
 
 While everyone is encouraged to complete all sections of the demonstration guide, actual completion requirements vary by role:
 
