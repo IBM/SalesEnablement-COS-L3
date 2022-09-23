@@ -5,10 +5,7 @@ The goal of this demonstration guide is to illustrate how to perform a demonstra
 ![](_attachments/COS-rg-seismic.png)
 
 !!! Important
-    All users of this demonstration guide should have a working knowledge of the IBM COS offering. While not a pre-requisite for the {{learningplan.name}}, it is recommended that all users complete the IBM Cloud Object Storage Level 2 badge:
-
-    - IBM LINK TO L2
-    - Business Partner LINK TO L2
+    All users of this demonstration guide should have a working knowledge of the IBM COS offering. 
 
 **In this demonstration environment, full access to the IBM Cloud account is NOT provided.** IBM Cloud user identifications (IDs) will be restricted to specific capabilities. The IBM Technology Zone utilized in this demonstration guide is shared by all users. Permission to create or modify COS service instances, COS buckets, Key Protect instances, etc. is not provided! Additionally, expiration and retention periods are set in days rather than months or years, which would be more typical in a real-life regulated archive solution. These restrictions are in place to minimize costs, provide an easy-to-use, pre-built environment for this learning activity, and provide an environment for general client demonstrations on very short notice.
 
