@@ -11,6 +11,8 @@ In this chapter, explore the configurations of the pre-provisioned buckets.
 
 3. Click **Storage** under **Resource summary** on the IBM Cloud Dashboard.
 
+The *View all** link under **Resource summary** may need to be clicked to display the current resources.
+
 ![](_attachments/Dashboard.png)
 
 4. Click **{{COS.serviceInstanceName}}** in the **Storage** resource list.
@@ -26,7 +28,7 @@ In this chapter, explore the configurations of the pre-provisioned buckets.
 ![](_attachments/Bucket1.png)
 
 !!! Important
-    The image above was captured when not content has been uploaded to the bucket. This view may change depending on what content is actively stored in COS. Expect to see differences in the **Objects** table.
+    The image above was captured prior to content being uploaded. This view will change depending on what content is currently stored in COS. Expect to see differences in the **Objects** table.
 
 At this point, explore the various sections on the **Configuration** page for the bucket. Three specific sections to explore are: **Key management**, **Activity Tracker**, **Retention policy** and **Lifecycle policy**.
 
