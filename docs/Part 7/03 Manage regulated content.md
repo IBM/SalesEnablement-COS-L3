@@ -62,13 +62,13 @@ At this time, there may or may not be events displayed in the **Activity Tracker
 
 11. Scroll down to the **Retention** section of the **Organize your objects (advanced)** section.
 
-![](_attachments/ObjectUploadRetention.png)
+![](_attachments/OjbectRetentionDialog.png)
 
 A couple of items to note. The default **Duration** is set to 1 day. Recall this from the **bucket** settings. Also note, the **eligible for deletion** date should align with the maximum retention value of the **bucket**.
 
 12. Change the **Duration** field from **1** to **0** days and click **Upload**.
 
-![](_attachments/ObjectUploadObject.png)
+![](_attachments/ObjectUploadRetention.png)
 
 A **Transfers** dialog will appear, and an **Upload Success** message should also be displayed. Clear these by clicking the **x** for each dialog. Additionally, now in the bucket details table, the newly upload object should be listed. Note, use the table search or use the **Object name** sort option in the table to find the uploaded object.
 
@@ -90,9 +90,11 @@ Notice the two new options available: **Download objects** and **Delete objects*
 
 16. Click **Download objects**.
 
-![](_attachments/DownloadDialog.png)
+![](_attachments/ObjectSelectedDownload.png)
 
 The **Transfers** dialog shows the download progress and success. Dismiss the **Transfers** dialog by clicking the **X** at top right.
+
+![](_attachments/DownloadDialog.png)
 
 17. Select the **checkbox** beside the filename again, and click **Delete objects**.
 
