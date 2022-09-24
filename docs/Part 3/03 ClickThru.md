@@ -18,7 +18,7 @@ Note, fields that require a text entry (e.g. service name) are pre-populated in 
 9. Click the **Select a resource group** pull-down menu.
 10. Click the **{{KeyProtect.serviceInstanceRG}}** option in the resource group pull-down menu.
 11. Click the **I have read and agree to the following license agreements** check box.
-12. Click the **Create** button.
+12. Click the **Create** button. 
 
 Once the provisioning completes, the new Key Protect service can be found in the **Services and software** section of the IBM Cloud Portal dashboard. The Key Protect service instance is now ready for use.
 

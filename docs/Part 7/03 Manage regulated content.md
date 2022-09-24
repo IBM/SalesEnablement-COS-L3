@@ -2,9 +2,11 @@ Next, follow the steps below to verify the retention policies created for the bu
 
 To complete the next steps, users will be utilizing three (3) browser windows:
 
-1. Browser window with this demonstration script
-2. Browser window with IBM Cloud Portal accessing the COS bucket user interface
-3. Browser window with IBM Cloud Activity Tracker
+- Browser window with this demonstration script
+
+- Browser window with IBM Cloud Portal accessing the COS bucket user interface
+
+- Browser window with IBM Cloud Activity Tracker
 
 Once all windows are started, arrange them on separate monitors if available or resize the windows so they are all visible at same time. Note, each page utilizes reactive web interfaces which when resized by hide certain menus or icons.
 
@@ -80,33 +82,33 @@ Note, the **create object** event should be towards the bottom of the listing. O
 
 ![](_attachments/ATObjectCreateDetails.png)
 
-16. In the IBM Cloud Portal, click the **checkbox** next to the uploaded file.
+15. In the IBM Cloud Portal, click the **checkbox** next to the uploaded file.
 
 ![](_attachments/ObjectSelected.png)
 
 Notice the two new options available: **Download objects** and **Delete objects**.
 
-17. Click **Download objects**.
+16. Click **Download objects**.
 
 ![](_attachments/DownloadDialog.png)
 
 The **Transfers** dialog shows the download progress and success. Dismiss the **Transfers** dialog by clicking the **X** at top right.
 
-18. Select the **checkbox** beside the filename again, and click **Delete objects**.
+17. Select the **checkbox** beside the filename again, and click **Delete objects**.
 
 ![](_attachments/ObjectSelected2.png)
 
 Based upon the retention policies specified for this object and the bucket, can the object be deleted at this time?
 
-19. Enter **Permanently delete** in the text entry field, and click the **Delete** button.
+18. Enter **Permanently delete** in the text entry field, and click the **Delete** button.
 
 ![](_attachments/PermanentlyDeleteDialog.png)
 
 Since the object was uploaded with a **0 Day** retention, it can be deleted.
 
-20. Switch to the **Activity Tracker** Dashboard.
+19. Switch to the **Activity Tracker** Dashboard.
 
-21. Find and expand the two (2) **delete** events in the Dashboard.
+20. Find and expand the two (2) **delete** events in the Dashboard.
 
 ![](_attachments/ATObjectDelete.png)
 
@@ -122,11 +124,11 @@ Take note of the details that **Activity Tracker** logged.
 
 What will happen if an attempt is made to delete this recently uploaded file?
 
-22. On the IBM Cloud Portal page, select the newly uploaded file and click **Delete objects**.
+21. On the IBM Cloud Portal page, select the newly uploaded file and click **Delete objects**.
 
 ![](_attachments/DeleteObject2.png)
 
-23. In the **Delete object** dialog, enter **Permanently delete** and click the **Delete** button.
+22. In the **Delete object** dialog, enter **Permanently delete** and click the **Delete** button.
 
 Did the **delete** succeed? Why not?
 
@@ -134,15 +136,15 @@ A message the like the image below should be displayed stating the delete did no
 
 ![](_attachments/DeleteObject2Failed.png)
 
-24. Switch to the **Activity Tracker** Dashboard.
+23. Switch to the **Activity Tracker** Dashboard.
 
-25. Locate the two (2) new **delete** events in the Dashboard.
+24. Locate the two (2) new **delete** events in the Dashboard.
 
 Note, these should show a **warning** status instead of **normal**.
 
 ![](_attachments/ATDeleteObject2Failed.png)
 
-26. Expand the first event **delete** event in the Dashboard by clicking just to the left of the entry.
+25. Expand the first event **delete** event in the Dashboard by clicking just to the left of the entry.
 
 ![](_attachments/ATDeleteObject2Failed2.png)
 
