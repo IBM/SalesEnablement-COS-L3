@@ -2,7 +2,7 @@ Another means to protect regulated date is through the use of **Legal holds**. C
 
 Follow the steps below to create a **legal hold** on an object. If not already open, open new browser tabs or windows to the IBM Cloud Portal COS bucket details and Activity Tracker as described in Steps 1 and 2 of the previous chapter.
 
-1. Click the **Upload** button.
+1. On the IBM Cloud Portal page, click the **Upload** button.
 
 ![](_attachments/ObjectUpload.png)
 
@@ -26,15 +26,15 @@ Follow the steps below to create a **legal hold** on an object. If not already o
 
 A Transfers dialog will open and after the file uploads, a success message will appear. Close these windows by clicking the **X** at top right of each.
 
-Recall how in the last chapter how it was possible to delete an object that had a retention period of 0 days. Now, try and delete the document just upload that has a retention of 0 days AND a **legal hold**.
+Recall how in the last chapter it was possible to delete an object that had a retention period of 0 days. Now, try and delete the document just upload that has a retention of 0 days AND a **legal hold**.
 
 8. Select the newly uploaded document and click **Delete objects**.
 
 ![](_attachments/deleteObjectWithLegalHold.png)
 
-9. Click **Delete** in the **Delete object** dialog.
+9. In the **Delete object** dialog, enter **Permanently delete** and click the **Delete** button.
 
-![](_attachments/deleteObjectWithLegalHoldDialog.png)
+![](_attachments/PermanentlyDeleteDialog2.png)
 
 Notice the **Delete** failed. An error message should have appeared stating the **Delete** failed due to an attached policy.
 
@@ -46,7 +46,7 @@ Notice the **Delete** failed. An error message should have appeared stating the 
 
 ![](_attachments/ATDeleteObjectWithLegalHold.png)
 
-The **legal hold** on the object prevents the object from being deleted even tough the retention period is set to 0 days.
+The **legal hold** on the object prevents the object from being deleted even though the retention period is set to 0 days.
 
 12. Return to the IBM Cloud Portal, click on the last object added to view the object details page.
 
@@ -63,7 +63,7 @@ The **legal hold** has now been removed. A new entry in **Activity Tracker** sho
 
 ![](_attachments/ATRemoveLegalHold.png)
 
-Now that the **legal hold** has been removed, the object can be deleted as it's retention period is set to 0 days and there are no **legal holds** on the object.
+Now that the **legal hold** has been removed, the object can be deleted, as it's retention period is set to 0 days and there are no **legal holds** on the object.
 
 Technical sellers should proceed to Part 8 and explore the COS command line interfaces (CLIs).
 

@@ -1,5 +1,7 @@
 In this chapter, explore the configurations of the pre-provisioned buckets.
 
+!!! Important
+    Before proceeding, all users should have verify the IBM Technology Zone Environment is **Ready** and the invitation to join the **{{account}}** has been accepted.
 
 1. Open the IBM Cloud Portal: <a href="https://cloud.ibm.com/" target="_blank">https://cloud.ibm.com/</a> and authenticate.
 2. Change to the **{{account}}** account.
@@ -11,7 +13,7 @@ In this chapter, explore the configurations of the pre-provisioned buckets.
 
 3. Click **Storage** under **Resource summary** on the IBM Cloud Dashboard.
 
-The *View all** link under **Resource summary** may need to be clicked to display the current resources.
+The **_View all_** link under **Resource summary** may need to be clicked to display the current resources.
 
 ![](_attachments/Dashboard.png)
 
@@ -19,7 +21,7 @@ The *View all** link under **Resource summary** may need to be clicked to displa
 
 ![](_attachments/StorageResourceList.png)
 
-5. Click **{{COS.bucket1}} in the **Buckets** table.
+5. Click **{{COS.bucket1}}** in the **Buckets** table.
 
 ![](_attachments/BucketList.png)
 

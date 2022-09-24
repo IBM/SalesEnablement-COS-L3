@@ -42,7 +42,7 @@ At this time, there may or may not be events displayed in the **Activity Tracker
 
 ![](_attachments/SideBySide.png)
 
-7. Click the **Upload** button.
+7. On the **{{COS.bucket1}}** IBM Cloud Portal page (**Objects** tab), click the **Upload** button.
 
 ![](_attachments/ObjectUpload.png)
 
@@ -62,17 +62,17 @@ At this time, there may or may not be events displayed in the **Activity Tracker
 
 ![](_attachments/ObjectUploadRetention.png)
 
-A couple of items to note. The default **Duration** is set to 1 day. Recall this from the **bucket** settings. Also note, the **eligible for deletion** date which should align with the maximum retention value of the **bucket**.
+A couple of items to note. The default **Duration** is set to 1 day. Recall this from the **bucket** settings. Also note, the **eligible for deletion** date should align with the maximum retention value of the **bucket**.
 
 12. Change the **Duration** field from **1** to **0** days and click **Upload**.
 
 ![](_attachments/ObjectUploadObject.png)
 
-A **Transfers** dialog will appear and a **Success** message should also be displayed. Clear these by clicking the **x** for each dialog. Additionally, now in the bucket details table, the newly upload object should be listed. Note, use the table search or use the **Object name** sort option in the table to find the uploaded object.
+A **Transfers** dialog will appear and an **Upload Success** message should also be displayed. Clear these by clicking the **x** for each dialog. Additionally, now in the bucket details table, the newly upload object should be listed. Note, use the table search or use the **Object name** sort option in the table to find the uploaded object.
 
 13. Switch to the **Activity Tracker** Dashboard.
 
-14. Click to the left of the **create object** event in the Dashboard.
+14. Click to the left of the **create object** event in the Dashboard that relates to the image that was just uploaded.
 
 ![](_attachments/ATObjectCreate.png)
 
@@ -80,59 +80,53 @@ Note, the **create object** event should be towards the bottom of the listing. O
 
 ![](_attachments/ATObjectCreateDetails.png)
 
-13. Click the object name for the newly uploaded object.
-
-![](_attachments/UploadedObjects.png)
-
-Examine the details that **Activity Tracker** recorded for the creation of the object. As highlighted in the image above, note the **action** that caused the event to be tracked, who the **initiator** was, the **reason** code, and the **objectLifecycle** information.
-
-14. In the IBM Cloud Portal, click the **checkbox** next to the uploaded file.
+16. In the IBM Cloud Portal, click the **checkbox** next to the uploaded file.
 
 ![](_attachments/ObjectSelected.png)
 
 Notice the two new options available: **Download objects** and **Delete objects**.
 
-15. Click **Download objects**.
+17. Click **Download objects**.
 
 ![](_attachments/DownloadDialog.png)
 
 The **Transfers** dialog shows the download progress and success. Dismiss the **Transfers** dialog by clicking the **X** at top right.
 
-16. Select the filename again, and click **Delete objects**.
+18. Select the **checkbox** beside the filename again, and click **Delete objects**.
 
 ![](_attachments/ObjectSelected2.png)
 
 Based upon the retention policies specified for this object and the bucket, can the object be deleted at this time?
 
-17. Click the **Delete** button.
+19. Enter **Permanently delete** in the text entry field, and click the **Delete** button.
 
-![](_attachments/DeleteDialog.png)
+![](_attachments/PermanentlyDeleteDialog.png)
 
 Since the object was uploaded with a **0 Day** retention, it can be deleted.
 
-18. Switch to the **Activity Tracker** Dashboard.
+20. Switch to the **Activity Tracker** Dashboard.
 
-19. Find and expand the two (2) **delete** events in the Dashboard.
+21. Find and expand the two (2) **delete** events in the Dashboard.
 
 ![](_attachments/ATObjectDelete.png)
 
-Once located, click just to the left of each line in the table. This will expand the entry.
+Once located, click just to the left of each line in the table. This will expand the entry, like the image below. There will often be multiple events logged by **Activity Tracker** from a single user action.
 
 ![](_attachments/ATObjectDeleteDetails.png)
 
 Take note of the details that **Activity Tracker** logged.
 
-**Next, repeat steps seven (7) through 12 to upload another file to COS, but this time set the Duration to a value between one (1) and size (6).** Recall, the maximum retention period for the bucket is set to 6.
+**On the IBM Cloud Portal page, repeat steps seven (7) through 12 to upload another file to COS. This time, on step 12, set the Duration to a value between one (1) and (6).** Recall, the maximum retention period for the bucket is set to 6.
 
 ![](_attachments/UploadObject2.png)
 
 What will happen if an attempt is made to delete this recently uploaded file?
 
-20. Select the newly uploaded file and click **Delete objects**.
+22. On the IBM Cloud Portal page, select the newly uploaded file and click **Delete objects**.
 
 ![](_attachments/DeleteObject2.png)
 
-21. Click **Delete** in the **Delete object** dialog.
+23. In the **Delete object** dialog, enter **Permanently delete** and click the **Delete** button.
 
 Did the **delete** succeed? Why not?
 
@@ -140,15 +134,15 @@ A message the like the image below should be displayed stating the delete did no
 
 ![](_attachments/DeleteObject2Failed.png)
 
-22. Switch to the **Activity Tracker** Dashboard.
+24. Switch to the **Activity Tracker** Dashboard.
 
-23. Locate the two (2) new **delete** events in the Dashboard.
+25. Locate the two (2) new **delete** events in the Dashboard.
 
 Note, these should show a **warning** status instead of **normal**.
 
 ![](_attachments/ATDeleteObject2Failed.png)
 
-24. Expand the first event **delete** event in the Dashboard by clicking just to the left of the entry.
+26. Expand the first event **delete** event in the Dashboard by clicking just to the left of the entry.
 
 ![](_attachments/ATDeleteObject2Failed2.png)
 
@@ -156,10 +150,10 @@ Notice the following fields in the event that are now audit ready.
 
 ![](_attachments/ATDeleteObject2FailedDetails.png)
 
-Because the expiration for the object was set with a three (3) day retention period, the object can not be removed. This object will remain in COS until either one of the following two actions occur:
+Because the expiration for the object was set with a three (3) day retention period, the object cannot be removed. This object will remain in COS until either one of the following two actions occur:
 
 - The object is deleted after the 3 day retention period by someone with appropriate permissions.
-- The object is automatically deleted after the 7 day expiry occurs that is set on the bucket.
+- The object is automatically deleted after the 7 day expiry occurs as set on the bucket.
 
 Notice there is a second bucket that has been provisioned with no retention policies: {{COS.bucket2}}. Feel free to use this bucket as part of client demonstrations.
 

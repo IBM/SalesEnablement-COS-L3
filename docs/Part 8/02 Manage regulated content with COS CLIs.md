@@ -1,8 +1,8 @@
-For this exercise, the IBM Cloud Shell will be used so no additional software is required. IBM Cloud Shell gives users complete control of their cloud resources, applications and infrastructure, from any web browser. IBM Cloud Shell provides pre-authenticated access to the latest tools and programming languages for cloud-based development, deployment and management of services and applications — all in a secure shell. IBM Cloud Shell is instantly accessible from the IBM Cloud portal.
+For this exercise, the IBM Cloud Shell will be used so no additional software is required. IBM Cloud Shell gives users complete control of their cloud resources, applications and infrastructure, from any web browser. IBM Cloud Shell provides pre-authenticated access to the latest tools and programming languages for cloud-based development, deployment, and management of services and applications — all in a secure shell. IBM Cloud Shell is instantly accessible from the IBM Cloud portal.
 
 The directions below do not specify to check IBM Cloud Activity Tracker, but feel free to validate all actions that access data objects (i.e. downloading objects, uploading objects) is tracked by reviewing the Activity Tracker events.
 
-Follow the seps below to learn more about the COS command line interfaces.
+Follow the steps below to learn more about the COS command line interfaces.
 
 1. Change to the **ITZ - ADHOC03** account using the drop-down switcher, as shown in the GIF below.
 
@@ -11,32 +11,28 @@ Follow the seps below to learn more about the COS command line interfaces.
 !!! tip
     If the browser window is narrow, this icon: ![](_attachments/SwitchAccountsIcon.png) may appear instead of the current account name as shown in the screen capture above.
 
-2. Click the IBM Cloud Shell icon ![](_attachments/CloudShellIcon.png).
+2. Click the **IBM Cloud Shell** icon ![](_attachments/CloudShellIcon.png).
 
 ![](_attachments/StartCloudShell.png)
 
-The next steps are performed in using the IBM Cloud Shell window that was just opened.
-
-3. In the top-right corner of the IBM Cloud Shell window is a square icon with an "up" arrow. Click this button to upload a file — upload the SSH key downloaded earlier.
-
-In this chapter, a similar scenario as seen in Part 7 will be used where files will be uploaded, retention periods set, and attempts to delete the objects will be made. To facilitate the scenario, a script is provided that will automatically download the 6 image files to the IBM Cloud Shell environment.
+The next steps are performed using the IBM Cloud Shell window that was just opened.
 
 !!! important
     Be sure to utilize the demonstration guides **copy** ![](_attachments/Usage-Clipboard.png) icon to avoid typographical errors in executing commands.
 
-4. Download the script to download the images files.
+3. Download the script to download the images files.
 
 ```
 wget https://raw.githubusercontent.com/IBM/SalesEnablement-COS-L3/main/docs/includes/downloadImageFiles.bash
 ```
 
-5. Execute the script to download the images files, and when prompted, enter a unique prefix to use in the file names (e.g. arj123).
+4. Execute the script to download the images files, and when prompted, enter a unique prefix to use in the file names (e.g. arj123).
 
 ```
 bash ./downloadImageFiles.bash
 ```
 
-6. Verify the files now exist in the IBM Cloud Shell environment.
+5. Verify the files now exist in the IBM Cloud Shell environment.
 
 ```
 ls *.jpg
@@ -47,7 +43,7 @@ ls *.jpg
 
 Next, in order to use the COS CLIs, a few configuration steps must be completed.
 
-7. Set the COS region to {{COS.serviceInstanceRegion}}.
+6. Set the COS region to {{COS.serviceInstanceRegion}}.
 
 ```
 ibmcloud cos config region --region "{{COS.serviceInstanceRegion}}"
@@ -61,7 +57,7 @@ ibmcloud cos config region --region "{{COS.serviceInstanceRegion}}"
 ??? failure "If the command above failed..."
     Occasionally, when creating the IBM Cloud Shell, the account may not be properly set for the shell instance.  Verify the **Current account** shown in top right corner of the window is set to {{account}}. If it is not properly set, close the current IBM Cloud Shell browser tab, repeat Step 1, wait a few seconds, and then continue with next steps if the **Current account** is set to {{account}}.
 
-8. Retrieve the Cloud Resource Name (CRN) for the COS service instance {{COS.serviceInstanceName}}.
+7. Retrieve the Cloud Resource Name (CRN) for the COS service instance {{COS.serviceInstanceName}}.
 
 The -id flag returns just the CRN without additional information.
 
@@ -74,7 +70,7 @@ ibmcloud resource service-instance {{COS.serviceInstanceName}} -id
 
     crn:v1:bluemix:public:cloud-object-storage:global:a/ba0e33c9056f470ca19de009747ec654:43d07b21-b680-4d31-9d51-178f582d630c:: 43d07b21-b680-4d31-9d51-178f582d630c
 
-9. Set Cloud Resource Name (CRN) for the COS CLI configuration to the COS service instance CRN.
+8. Set Cloud Resource Name (CRN) for the COS CLI configuration to the COS service instance CRN.
 
 In the next step, multiple commands are being executed. The command from the previous step is re-run and sent to the **cut** command to only return first part of the output. This is then added to the command to set the CRN for the COS configuration. The -q flag is added to suppress the headers from the first command.
 
@@ -89,7 +85,7 @@ ibmcloud cos config crn -crn `ibmcloud resource service-instance {{COS.serviceIn
 
     Successfully stored your service instance ID.
 
-10. Verify CRN and region are set in COS CLI configuration.
+9. Verify CRN and region are set in COS CLI configuration.
 
 ```
 ibmcloud cos config list
@@ -118,13 +114,13 @@ ibmcloud cos config list
 
 Notice in the output the **Download Location** is set to **/home/<user ID>/Downloads**. Since this directory doesn't exist, it needs to be created before an object download can occur.
 
-11. Create a **Downloads** directory in the Cloud Shell environment.
+10. Create a **Downloads** directory in the Cloud Shell environment.
 
 ```
 mkdir Downloads
 ```
 
-12. List all the **buckets** in the COS **service instance**.
+11. List all the **buckets** in the COS **service instance**.
 
 ```
 ibmcloud cos buckets
@@ -141,7 +137,7 @@ ibmcloud cos buckets
 
     cos-l3-without-retention   Sep 15, 2022 at 22:10:01
 
-13. List the **storage class** of the COS bucket.
+12. List the **storage class** of the COS bucket.
 
 ```
 ibmcloud cos bucket-class-get -bucket {{COS.bucket1}}
@@ -156,7 +152,7 @@ ibmcloud cos bucket-class-get -bucket {{COS.bucket1}}
 
     Class: Smart
 
-14. List the current content of a bucket.
+13. List the current content of a bucket.
 
 ```
 ibmcloud cos objects -bucket {{COS.bucket1}}
@@ -175,7 +171,7 @@ Note, when executing the above command, the output will be similar to the exampl
 
     arj123-check3.jpg   Sep 19, 2022 at 20:07:32   83.08 KiB
 
-15. Upload a file to the COS bucket.
+14. Upload a file to the COS bucket.
 
 The next command has 2 parameters that will need to be modified prior to executing them. The **-key** option specifies the filename for the object in COS. The **-body** option specifies the local file to be uploaded. A unique **-key** must be specified. In the commands below, change **arj123-check4.jpg** to one of the files downloaded earlier. Be sure to select a file that has not already been uploaded.
 
@@ -191,7 +187,7 @@ The above command does not specify a retention period for the object. When this 
 
     Successfully uploaded object 'arj123-check4.jpg' to bucket 'cos-l3-with-retention'.
 
-16. Try uploading the same file again.
+15. Try uploading the same file again.
 
 !!! tip "Tip"
     Cut, paste and modify the command below, or simply use the **up arrow** on the keyboard to bring up the last command.
@@ -207,9 +203,9 @@ The above command does not specify a retention period for the object. When this 
 Why did this command fail?
 
 ??? question "Answer"
-    Once an object is added to a bucket with a retention policy, it cannot be updated. Objects stored in COS with buckets with a retention policy are **immutable**.
+    Once an object is added to a bucket with a retention policy, it cannot be updated. Objects stored in COS with buckets having a retention policy are **immutable**.
 
-17. Try to download the object.
+16. Try to download the object.
 
 ```ibmcloud cos object-get -bucket {{COS.bucket1}} -key arj123-check4.jpg```
 
@@ -219,7 +215,7 @@ Why did this command fail?
     Successfully downloaded 'arj123-check4.jpg' from bucket 'cos-l3-with-retention'
     137.57 KiB downloaded.
 
-18. Verify the file was downloaded.
+17. Verify the file was downloaded.
 
 ```
 ls -l Downloads
@@ -230,7 +226,7 @@ ls -l Downloads
 
     -rw-rw-r-- 1 andrewj user 140868 Sep 21 23:06 xyz123-check4.jpg
 
-19. Try to delete the object, enter **y** when prompted.
+18. Try to delete the object, enter **y** when prompted.
 
 ```ibmcloud cos object-delete -bucket {{COS.bucket1}} -key arj123-check4.jpg```
 

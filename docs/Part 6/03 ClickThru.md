@@ -29,7 +29,7 @@ Note, fields that require a text entry (e.g. service name) are pre-populated in 
 19. Click **Save** in the **Retention policy** section.
 20. Click the **Key management disabled** toggle button under **Encryption**.
 21. Click the **Use existing instance** button in the **Key Protect** tile.
-22. Click the **{{KeyProtect.serviceInstanceName}}** radio button.
+22. Click the **{{KeyProtect.rootKey}}** radio button.
 23. Click **Associate key**.
 24. Click the **Activity tracking disabled** toggle button under **Monitoring & Activity tracking**.
 25. Click the **Track data events (optional)** checkbox.
