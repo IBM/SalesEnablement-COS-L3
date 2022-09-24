@@ -13,7 +13,7 @@ Note, fields that require a text entry (e.g. service name) are pre-populated in 
 3. Click in the **Catalog search** text entry field.
 4. Click the **IBM Cloud Activity Tracker** tile.
 5. Click the **Select a location** pull-down menu.
-6. Click the **{{ActivityTracker.serviceInstanceRegion}} Region** option in the location pull-down menu.
+6. Click the **{{ActivityTracker.serviceLocation}} Region** option in the location pull-down menu.
 7. Click the **{{ActivityTracker.servicePricingPlan}}** entry in the payment plan table.
 8. Click in the **Service name** text entry field.
 9. Click the **Select a resource group** pull-down menu.

@@ -16,7 +16,7 @@ Notice the group includes three (3) services: Cloud Object Storage, IBM Cloud Ac
 Notice, however, that one role for COS looks different. The role has the name **COSL3MODwriter**. This is a custom role that was defined specifically for this demonstration script. Why was this custom role needed? Recall in the demonstration script, users had the ability to upload content to a bucket, download content from a bucket, create a legal hold, remove a legal hold, but NOT modify the buckets that were pre-provisioned. While the **Reader** role provided the download and query access for objects, and the **Object Writer** role provided the ability to upload objects, the ability to delete an object and manage legal holds are not provided by the **Object Writer** role. Those capabilities are provided in another role called **Writer**. So why not use the **Writer** role instead of **Object Writer**? Because **Object Writer** also provides the access to create new buckets and remove buckets. Providing users with that capability would allow any user of the shared environment to create any number of buckets and remove the shared buckets. Not good.
 
 Now the aha moment. There is the ability in IAM to create a custom role, in this case **COSL3MODwriter**.
-Custom roles allow administrators the ability to combine any number of actions for a specific service. The **COSL3MODwrtier** custom role looks like:
+Custom roles allow administrators the ability to combine any number of actions for a specific service. The **COSL3MODwriter** custom role looks like:
 
 ![](_attachments/COSL3MODwriter.png)
 

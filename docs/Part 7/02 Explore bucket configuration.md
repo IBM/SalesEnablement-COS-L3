@@ -1,7 +1,7 @@
 In this chapter, explore the configurations of the pre-provisioned buckets.
 
 !!! Important
-    Before proceeding, all users should have verify the IBM Technology Zone Environment is **Ready** and the invitation to join the **{{account}}** has been accepted.
+    Before proceeding, all users should verify their IBM Technology Zone Environment is **Ready** and the invitation to join the **{{account}}** has been accepted. The invitation e-mail subject line is **Account: You are invited to join an account in IBM Cloud** and was sent by **no-reply@cloud.ibm.com**
 
 1. Open the IBM Cloud Portal: <a href="https://cloud.ibm.com/" target="_blank">https://cloud.ibm.com/</a> and authenticate.
 2. Change to the **{{account}}** account.

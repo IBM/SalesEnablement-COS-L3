@@ -42,7 +42,7 @@ At this time, there may or may not be events displayed in the **Activity Tracker
 
 ![](_attachments/SideBySide.png)
 
-7. On the **{{COS.bucket1}}** IBM Cloud Portal page (**Objects** tab), click the **Upload** button.
+7. On the IBM Cloud Portal page, click the **Upload** button on the **Objects** tab of the **{{COS.bucket1}}** bucket.
 
 ![](_attachments/ObjectUpload.png)
 
@@ -68,7 +68,7 @@ A couple of items to note. The default **Duration** is set to 1 day. Recall this
 
 ![](_attachments/ObjectUploadObject.png)
 
-A **Transfers** dialog will appear and an **Upload Success** message should also be displayed. Clear these by clicking the **x** for each dialog. Additionally, now in the bucket details table, the newly upload object should be listed. Note, use the table search or use the **Object name** sort option in the table to find the uploaded object.
+A **Transfers** dialog will appear, and an **Upload Success** message should also be displayed. Clear these by clicking the **x** for each dialog. Additionally, now in the bucket details table, the newly upload object should be listed. Note, use the table search or use the **Object name** sort option in the table to find the uploaded object.
 
 13. Switch to the **Activity Tracker** Dashboard.
 
