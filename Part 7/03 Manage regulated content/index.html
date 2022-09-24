@@ -898,11 +898,17 @@
 
 <p>Next, follow the steps below to verify the retention policies created for the bucket.</p>
 <p>To complete the next steps, users will be utilizing three (3) browser windows:</p>
-<ol>
-<li>Browser window with this demonstration script</li>
-<li>Browser window with IBM Cloud Portal accessing the COS bucket user interface</li>
-<li>Browser window with IBM Cloud Activity Tracker</li>
-</ol>
+<ul>
+<li>
+<p>Browser window with this demonstration script</p>
+</li>
+<li>
+<p>Browser window with IBM Cloud Portal accessing the COS bucket user interface</p>
+</li>
+<li>
+<p>Browser window with IBM Cloud Activity Tracker</p>
+</li>
+</ul>
 <p>Once all windows are started, arrange them on separate monitors if available or resize the windows so they are all visible at same time. Note, each page utilizes reactive web interfaces which when resized by hide certain menus or icons.</p>
 <ol>
 <li>
@@ -971,27 +977,27 @@
 <p><img alt="" src="../_attachments/ATObjectCreate.png" /></p>
 <p>Note, the <strong>create object</strong> event should be towards the bottom of the listing. Once located, click just to the left of the line in the table. This will expand the entry.</p>
 <p><img alt="" src="../_attachments/ATObjectCreateDetails.png" /></p>
-<ol start="16">
+<ol start="15">
 <li>In the IBM Cloud Portal, click the <strong>checkbox</strong> next to the uploaded file.</li>
 </ol>
 <p><img alt="" src="../_attachments/ObjectSelected.png" /></p>
 <p>Notice the two new options available: <strong>Download objects</strong> and <strong>Delete objects</strong>.</p>
-<ol start="17">
+<ol start="16">
 <li>Click <strong>Download objects</strong>.</li>
 </ol>
 <p><img alt="" src="../_attachments/DownloadDialog.png" /></p>
 <p>The <strong>Transfers</strong> dialog shows the download progress and success. Dismiss the <strong>Transfers</strong> dialog by clicking the <strong>X</strong> at top right.</p>
-<ol start="18">
+<ol start="17">
 <li>Select the <strong>checkbox</strong> beside the filename again, and click <strong>Delete objects</strong>.</li>
 </ol>
 <p><img alt="" src="../_attachments/ObjectSelected2.png" /></p>
 <p>Based upon the retention policies specified for this object and the bucket, can the object be deleted at this time?</p>
-<ol start="19">
+<ol start="18">
 <li>Enter <strong>Permanently delete</strong> in the text entry field, and click the <strong>Delete</strong> button.</li>
 </ol>
 <p><img alt="" src="../_attachments/PermanentlyDeleteDialog.png" /></p>
 <p>Since the object was uploaded with a <strong>0 Day</strong> retention, it can be deleted.</p>
-<ol start="20">
+<ol start="19">
 <li>
 <p>Switch to the <strong>Activity Tracker</strong> Dashboard.</p>
 </li>
@@ -1006,17 +1012,17 @@
 <p><strong>On the IBM Cloud Portal page, repeat steps seven (7) through 12 to upload another file to COS. This time, on step 12, set the Duration to a value between one (1) and (6).</strong> Recall, the maximum retention period for the bucket is set to 6.</p>
 <p><img alt="" src="../_attachments/UploadObject2.png" /></p>
 <p>What will happen if an attempt is made to delete this recently uploaded file?</p>
-<ol start="22">
+<ol start="21">
 <li>On the IBM Cloud Portal page, select the newly uploaded file and click <strong>Delete objects</strong>.</li>
 </ol>
 <p><img alt="" src="../_attachments/DeleteObject2.png" /></p>
-<ol start="23">
+<ol start="22">
 <li>In the <strong>Delete object</strong> dialog, enter <strong>Permanently delete</strong> and click the <strong>Delete</strong> button.</li>
 </ol>
 <p>Did the <strong>delete</strong> succeed? Why not?</p>
 <p>A message the like the image below should be displayed stating the delete did not succeed "due to an attached policy".</p>
 <p><img alt="" src="../_attachments/DeleteObject2Failed.png" /></p>
-<ol start="24">
+<ol start="23">
 <li>
 <p>Switch to the <strong>Activity Tracker</strong> Dashboard.</p>
 </li>
@@ -1026,7 +1032,7 @@
 </ol>
 <p>Note, these should show a <strong>warning</strong> status instead of <strong>normal</strong>.</p>
 <p><img alt="" src="../_attachments/ATDeleteObject2Failed.png" /></p>
-<ol start="26">
+<ol start="25">
 <li>Expand the first event <strong>delete</strong> event in the Dashboard by clicking just to the left of the entry.</li>
 </ol>
 <p><img alt="" src="../_attachments/ATDeleteObject2Failed2.png" /></p>
