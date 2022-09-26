@@ -72,7 +72,7 @@ A couple of items to note. The default **Duration** is set to 1 day. Recall this
 
 A **Transfers** dialog will appear, and an **Upload Success** message should also be displayed. Clear these by clicking the **x** for each dialog. Additionally, now in the bucket details table, the newly upload object should be listed. Note, use the table search or use the **Object name** sort option in the table to find the uploaded object.
 
-![](_attachments/DownloadDialog.png)
+![](_attachments/TransferUpDialog.png)
 
 13. Switch to the **Activity Tracker** Dashboard.
 
