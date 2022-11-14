@@ -21,7 +21,7 @@ For this demonstration script, users should create 4 to 6 small files that will 
 
 <a href="https://ibm.github.io/SalesEnablement-COS-L3/includes/checkImages/check3.jpg" target="_blank">check3.jpg</a>
 
-<a href="https://ibm.github.io/SSalesEnablement-COS-L3/includes/checkImages/check4.jpg" target="_blank">check4.jpg</a>
+<a href="https://ibm.github.io/SalesEnablement-COS-L3/includes/checkImages/check4.jpg" target="_blank">check4.jpg</a>
 
 <a href="https://ibm.github.io/SalesEnablement-COS-L3/includes/checkImages/check5.jpg" target="_blank">check5.jpg</a>
 
