@@ -1,5 +1,17 @@
 Welcome to the {{learningplan.name}} demonstration guide! The goal of this demonstration guide is to provide sellers and technical sellers from IBM and Business Partners with the knowledge and tools to perform hands-on demonstrations of {{offering.name}}. Throughout this demonstration guide {{offering.name}} will be referred to as COS.
 
+**In this demonstration environment, full access to the IBM Cloud account is NOT provided.** User identifications (IDs) will be restricted to specific capabilities. Permission to create or modify COS service instances, COS buckets, Key Protect instances, etc. is not provided.
+
+!!! warning
+    Attempting to perform an action without the appropriate permissions will result in an error message like the one below. This is not an issue with the IBM Cloud or COS, rather a restriction of the demo environment and the permissions assigned to users.
+
+    ![](_attachments/ErrorMessage.png)
+
+Throughout the guide, images are used as examples of the IBM Cloud Portal and IBM Cloud Shell.
+
+!!! warning
+    The IBM Cloud Portal and {{offering.name}} changes on a regular basis and may differ from the images captured in this guide.
+
 While everyone is encouraged to complete all sections of the demonstration guide, actual completion requirements vary by role:
 
 - IBM Sales:
@@ -35,11 +47,6 @@ Before jumping to part 1, please read the guidance below. Reading and understand
 
 The {{guide.name}} is organized in parts and sub-parts or chapters. Most chapters contain numbered steps, which are actions to be performed.
 
-Throughout the guide, images are used as examples of the IBM Cloud Portal and IBM Cloud Shell.
-
-!!! warning
-    The IBM Cloud Portal and {{offering.name}} changes on a regular basis and may differ from the images captured in this guide.
-
 In some images, the following styles of highlighting are utilized:
 
 - Action highlight box: Illustrates where to click, enter, or select an item:
@@ -62,13 +69,6 @@ Additionally, there are several "click-thru" demonstrations. Links to click-thru
 ![](_attachments/ClickThruStartPage.png)
 
 Click the play button ![](_attachments/ClickThruPlayButton.png) in the middle of the screen to start the demo. Then, simply follow the steps in the demonstration guide. If unsure where to click, click anywhere on the screen and a highlight box will appear showing where to click next.
-
-**In this demonstration environment, full access to the IBM Cloud account is NOT provided.** User identifications (IDs) will be restricted to specific capabilities. Permission to create or modify COS service instances, COS buckets, Key Protect instances, etc. is not provided.
-
-!!! warning
-    Attempting to perform an action without the appropriate permissions will result in an error message like the one below. This is not an issue with the IBM Cloud or COS, rather a restriction of the demo environment and the permissions assigned to users.
-
-    ![](_attachments/ErrorMessage.png)
 
 ## Acronyms
 
