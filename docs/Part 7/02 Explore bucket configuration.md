@@ -11,7 +11,7 @@ In this chapter, explore the configurations of the pre-provisioned buckets.
 !!! tip
     If the browser window is narrow, this icon: ![](_attachments/SwitchAccountsIcon.png) may be seen instead of the current account name as shown in the screen capture above.
 
-3. Click the navigation **hamburger button** on the upper left corner on IBM Cloud Portal and then Click **Resource list**
+3. Click the navigation **hamburger button** ![](-attachements/HamburgerIcon.png) on the upper left corner on IBM Cloud Portal and then Click **Resource list**
 
 ![](_attachments/Dashboard2.png)
 
