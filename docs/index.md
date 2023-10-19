@@ -29,7 +29,7 @@ While everyone is encouraged to complete all sections of the demonstration guide
     * Complete Parts 1 through 7 of this demonstration guide
     * Successfully pass a 5 question quiz found in the learn.ibm.com plan
 
-- Business Partner Sales:
+- Business Partner Technical Sales:
 
     * Complete all Parts of this demonstration guide
     * Successfully pass a 5 question quiz found in the learn.ibm.com plan
