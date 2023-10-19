@@ -10,7 +10,7 @@ Follow the steps below to create a **legal hold** on an object. If not already o
 
 ![](_attachments/ObjectUploadDialog.png)
 
-3. In the **Choose Files to Upload** dialog, select the a file to upload to COS, and click **Upload**.
+3. In the **Choose Files to Upload** dialog, select a file to upload to COS, and click **Upload**.
 
 ![](_attachments/FileUploadDialog3.png)
 

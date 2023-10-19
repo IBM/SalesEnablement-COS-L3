@@ -11,11 +11,9 @@ In this chapter, explore the configurations of the pre-provisioned buckets.
 !!! tip
     If the browser window is narrow, this icon: ![](_attachments/SwitchAccountsIcon.png) may be seen instead of the current account name as shown in the screen capture above.
 
-3. Click **Storage** under **Resource summary** on the IBM Cloud Dashboard.
+3. Click the navigation **hamburger button** on the upper left corner on IBM Cloud Portal and then Click **Resource list**
 
-The **_View all_** link under **Resource summary** may need to be clicked to display the current resources.
-
-![](_attachments/Dashboard.png)
+![](_attachments/Dashboard2.png)
 
 4. Click **{{COS.serviceInstanceName}}** in the **Storage** resource list.
 

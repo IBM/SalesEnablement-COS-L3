@@ -6,4 +6,4 @@ IBM Key Protect for IBM Cloud is a full-service encryption solution that allows 
 
 Learn more about IBM Hyper Protect Crypto Services <a href="https://www.ibm.com/cloud/hyper-protect-crypto?mhsrc=ibmsearch_a&mhq=hyper%20protect%20crypto%20services" target="_blank">here</a> and its ability to provide a higher level of security like <a href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/34" target="_blank">FIPS 140-2 Level 4</a>.
 
-**Key Protect services** are specific to a IBM Cloud location. In this demonstration, a new **Root Key** will be generated via the IBM Cloud Portal, but **Key Protect** also supports Bring Your Own Key (BYOK).
+**Key Protect services** are specific to an IBM Cloud location. In this demonstration, a new **Root Key** will be generated via the IBM Cloud Portal, but **Key Protect** also supports Bring Your Own Key (BYOK).
