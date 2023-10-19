@@ -1,8 +1,8 @@
 {{offering.name}} (COS) is a highly available, durable, and secure platform for storing unstructured data. Unstructured data (sometimes called binary or "blob" data) refers to data that is not highly structured in the manner of a database. Object storage is the most efficient way to store PDFs, media files, database backups, disk images, or even large structured datasets.
 
-The goal of this demonstration guide is to illustrate how to perform a demonstration of COS that addresses a specific pain point many clients have: management of regulated data. The scenario shown in this guide is based upon a Regulated Archive Demonstration originally created by the COS product management team. Learn more about this scenario <a href="https://ibm.seismic.com/Link/Content/DCGCjHR8Jp2GqGTM3bc3bcR3P4Wd" target="_blank">here</a> in Seismic in the **IBM Regulated Archive** entry of **The Seller Essentials** section. Note, the COS integration with Security Compliance Center is changing and may be going away. Ignore that aspect of the solution described in the above documents. Security Compliance Center is not used in this demonstration guide.
+The goal of this demonstration guide is to illustrate how to perform a demonstration of COS that addresses a specific pain point many clients have: management of regulated data. The scenario shown in this guide is based upon a Regulated Archive Demonstration originally created by the COS product management team. Learn more about this scenario <a href="https://ibm.seismic.com/Link/Content/DCmCR93gCdf2GGmPfd8RJ4pCp6b3" target="_blank">here</a> in Seismic in the **IBM Regulated Archive** entry of **The Seller Essentials** section. Note, the COS integration with Security Compliance Center is changing and may be going away. Ignore that aspect of the solution described in the above documents. Security Compliance Center is not used in this demonstration guide.
 
-![](_attachments/COS-rg-seismic.png)
+![](_attachments/COS-rg-seismic2.png)
 
 !!! Important
     All users of this demonstration guide should have a working knowledge of the IBM COS offering. 
