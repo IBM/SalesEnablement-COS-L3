@@ -37,7 +37,7 @@ In the ITZ automation:
 3. In rare cases, the ITZ automation may fail with a reservation expires and leave users in the cloud account. Run the following commands/scripts in IBM Cloud Shell or on your machine if you have the IBM Cloud CLI's installed (along with VPC plugin). The script assumes you are authenticated (ibmcloud login -sso). It will also remove any stray users (interactively). You could also do this manually through the IBM Cloud Portal.
 
 ```
-wget -O itzSCCMaintenance.perl https://raw.githubusercontent.com/IBM/SalesEnablement-COS-L3/main/tools/itzCOSMaintenance.perl
+wget -O itzCOSMaintenance.perl https://raw.githubusercontent.com/IBM/SalesEnablement-COS-L3/main/tools/itzCOSMaintenance.perl
 
 chmod +x itzCOSMaintenance.perl
 
