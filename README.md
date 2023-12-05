@@ -26,11 +26,15 @@ In the ITZ automation:
 
 1. Verify the following resources are available:
 
-**COS instance:** COS-L3-service *(us-south)*
-**COS buckets (in above instance):** cos-l3-with-retention and cos-l3-without-retention *descriptions of the settings for the buckets can be found in the demonstration guide*
-**Activity Tracker instance:** COS-L3-activity-tracker *(us-south)*
-**Key Protect instance:** COS-L3-KP-service
-**Key Protect root key:** COS-L3-RootKey-1
+- **COS instance:** COS-L3-service *(us-south)*
+
+- **COS buckets (in above instance):** cos-l3-with-retention and cos-l3-without-retention *descriptions of the settings for the buckets can be found in the demonstration guide*
+
+- **Activity Tracker instance:** COS-L3-activity-tracker *(us-south)*
+
+- **Key Protect instance:** COS-L3-KP-service
+
+- **Key Protect root key:** COS-L3-RootKey-1
 
 2. Users are instructed to create and remove several objects while executing this lab. The nice thing about the lab is that users are only instructed to create objects in the cos-l3-with-retention bucket which has a maximum retention period set of 6 days and a lifecycle policy of: *Expire after 7 days*. The cos-l3-without-retention bucket has the same lifecycle policy. So any objects created will automatically be removed after 7 days.
 
