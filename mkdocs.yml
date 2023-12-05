@@ -86,6 +86,10 @@ markdown_extensions:
 
 extra:
   generator: false
+  supportEmail: "andrewj@us.ibm.com"
+  supportSlack: 
+    name: "#cloud-platform-demo-feedback"
+    url: "https://ibm-technology-sales.slack.com/archives/C03PQ47KRQE"
   learningplan:
     name: "IBM Cloud Object Storage - Level 3"
   slack:
