@@ -18,8 +18,13 @@ Follow the steps below to learn more about the COS command line interfaces.
 The next steps are performed using the IBM Cloud Shell window that was just opened.
 
 !!! important
+    
     Be sure to utilize the demonstration guides **copy** ![](_attachments/Usage-Clipboard.png) icon to avoid typographical errors in executing commands.
 
+??? Warning "IBM Cloud Shell not opening?"
+    
+    It may take a minute before the IBM Cloud Shell prompt appears. If it does not, try closing that window and opening a new instance of IBM Cloud Shell. If that does not work, you can try using a private/incognito browser window (this will require you to re-authenticate to IBM Cloud). Support for IBM Cloud Shell is also available via slack <a href="https://ibm.enterprise.slack.com/archives/CF9SDUAP6" target="_blank">here</a>.
+    
 3. Download the script to download the images files.
 
 ```
